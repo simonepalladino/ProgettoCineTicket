@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/static/Images/logo_piccolo.png"/>
+  <title>Login - Cineticket </title>
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/stylesheet/Login.css">
+ <!-- <script type="text/javascript" lang="javascript" src="js/main.js"></script> -->
+</head>
+<body id="body_login">
+<div class="main-container">
+  <div class="form-container">
+
+    <div class="form-body" onsubmit="return validate()">
+      <h2 class="title">Log in with</h2>
+      <div class="social-login">
+        <ul>
+          <li class="google"><a href="https://accounts.google.com/AccountChooser/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser">Google</a></li>
+          <li class="fb"><a href="https://it-it.facebook.com/">Facebook</a></li>
+        </ul>
+      </div><!-- SOCIAL LOGIN -->
+
+      <div class="_or">or</div>
+
+      <form method="post" action="/login" class="the-form">
+        {{ form.hidden_tag() }}
+        <div>
+          <label>Email:</label>
+        {{ form.email }}
+        </div>
+        <div>
+          <label>Password:</label>
+        {{ form.password }}
+        </div>
+        <div>
+        {{ form.submit }}
+        </div>
+      </form>
+
+    </div><!-- FORM BODY-->
+
+    <div class="form-footer">
+      <div>
+        <span>Don't have an account?</span> <a href="{{ url_for('register') }}">Sign Up</a>
+      </div>
+    </div><!-- FORM FOOTER -->
+
+    <div class="form-footer">
+      <div>
+        <span>Do you want to log in as a guest user?</span> <a href="{{ url_for('home') }}">Click Here</a>
+      </div>
+    </div><!-- FORM FOOTER -->
+
+  </div><!-- FORM CONTAINER -->
+</div>
+</body>
+</html>
