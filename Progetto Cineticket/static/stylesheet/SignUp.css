@@ -1,0 +1,123 @@
+/* Inizio Pagina Registrazione   */
+@media screen and (max-width: 5120px) {
+  #body_reg{
+    margin: 0;
+    padding: 0;
+    color: #222222;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+    overflow-x: hidden;
+    background-image: -ms-linear-gradient(top right, #09203f 0%, #537895 100%);
+    background-image: -moz-linear-gradient(top right, #09203f 0%, #537895 100%);
+    background-image: -o-linear-gradient(top right, #09203f 0%, #537895 100%);
+    background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #09203f), color-stop(1, #537895));
+    background-image: -webkit-linear-gradient(top right, #09203f 0%, #537895 100%);
+    background-image: linear-gradient(to top right, #09203f 0%, #537895 100%);
+  }
+
+
+  * {
+    box-sizing: border-box; /* It is a CSS property, which sets the calculated value of total width and height of a form. */
+  }
+
+  .container {
+    background-color: #30404d;
+    overflow: hidden;
+    padding: 15px;
+    color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  input[type=text], input[type=emails], input[type=passwordreg], input[type=number],
+  input[type=select], input[type=select],
+  input[type=tel], input[type=address] {
+    width: 45%;
+    padding: 12px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  textarea {
+    width: 45%;
+    padding: 12px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  input[type=radio], input[type=checkbox] {
+    width: 1%;
+    padding-left: 0%;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  h1 {
+    font-family: Tahoma;
+    font-size: larger;
+    font-style: normal;
+    font-weight: bold;
+    color: goldenrod;
+    text-align: center;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-top: 30px;
+  }
+
+  #submit:hover {
+    background-color: #32a336;
+  }
+
+  /*  col-10 which takes 10% of the total screen.
+      It includes all the labels like First Name, Last Name, Email, Mobile, etc.) */
+  .col-10 {
+    float: left;
+    width: 10%;
+    margin-top: 6px;
+  }
+
+  /* col-90 takes 90% of the total screen.
+     It includes all the fields like text field, text area, number field,  date field, etc. */
+  .col-90 {
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* @media, It is a CSS query used for adopting all the screen resolution
+   (such as a mobile, tablet, desktop, laptop, etc.) */
+/*
+@media screen and (max-width: 600px) {
+  .col-10,.col-90,input[type=submit],#tastolocalita{
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+*/
+/* Fine Pagina Registrazione   */
