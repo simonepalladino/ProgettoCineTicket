@@ -9,7 +9,6 @@
 
 #body_login {
   margin: 0;
-  padding: 0;
   color: #222222;
   background-size: cover;
   background-repeat: no-repeat;
@@ -195,30 +194,30 @@ li.fb a::before {
   color: #e6e6e6;
 }
 
-.the-form, #email, #password::placeholder {
+.the-form, #email::placeholder, #password::placeholder {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.the-form, #email, #password:hover {
+.the-form, #email:hover, #password:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 
 .the-form, #email:focus,
 .the-form, #password:focus {
-  background: #ffffff;
+  background: #0000000F;
   box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-  border-color: #4a304d;
+  border-color: #0000000F;
   color: #222222;
+
 }
 
-.the-form, #email:focus::placeholder,
-.the-form, #password:focus::placeholder {
+.the-form, #email:focus::placeholder, #password:focus::placeholder{
   color: #666666;
 }
 
 .the-form [type="submit"] {
   background: #ffb37b;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 5px solid rgba(0, 0, 0, 0.1);
   padding: 18px;
   font-size: 20px;
   border-radius: 3px;
@@ -229,7 +228,7 @@ li.fb a::before {
 }
 
 .the-form [type="submit"]:hover {
-  opacity: .9;
+  opacity: .8;
 }
 
 .form-footer div {

@@ -2,13 +2,12 @@
 @media screen and (max-width: 5120px) {
   #body_reg{
     margin: 0;
-    padding: 0;
     color: #222222;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    padding: 20px;
+    padding: 100px;
     overflow-x: hidden;
     background-image: -ms-linear-gradient(top right, #09203f 0%, #537895 100%);
     background-image: -moz-linear-gradient(top right, #09203f 0%, #537895 100%);
@@ -16,6 +15,7 @@
     background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #09203f), color-stop(1, #537895));
     background-image: -webkit-linear-gradient(top right, #09203f 0%, #537895 100%);
     background-image: linear-gradient(to top right, #09203f 0%, #537895 100%);
+    font-family: Tahoma, serif;
   }
 
 
@@ -26,40 +26,21 @@
   .container {
     background-color: #30404d;
     overflow: hidden;
-    padding: 15px;
+    padding: 25px;
     color: #ffffff;
     border-radius: 3px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
-  input[type=text], input[type=emails], input[type=passwordreg], input[type=number],
-  input[type=select], input[type=select],
-  input[type=tel], input[type=address] {
-    width: 45%;
-    padding: 12px;
-    border: 1px solid rgb(168, 166, 166);
-    border-radius: 4px;
-    resize: vertical;
-  }
-
-  textarea {
-    width: 45%;
-    padding: 12px;
-    border: 1px solid rgb(168, 166, 166);
-    border-radius: 4px;
-    resize: vertical;
-  }
-
-  input[type=radio], input[type=checkbox] {
-    width: 1%;
-    padding-left: 0%;
+  #name, #surname, #username, #cellular, #address, #city, #state, #email, #password, #c_password {
+    width: 25%;
+    padding: 15px;
     border: 1px solid rgb(168, 166, 166);
     border-radius: 4px;
     resize: vertical;
   }
 
   h1 {
-    font-family: Tahoma;
     font-size: larger;
     font-style: normal;
     font-weight: bold;
@@ -72,7 +53,7 @@
     display: inline-block;
   }
 
-  input[type=submit] {
+  #submit {
     background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
@@ -81,10 +62,6 @@
     cursor: pointer;
     float: left;
     margin-top: 30px;
-  }
-
-  #submit:hover {
-    background-color: #32a336;
   }
 
   /*  col-10 which takes 10% of the total screen.
@@ -110,14 +87,16 @@
   }
 }
 
-/* @media, It is a CSS query used for adopting all the screen resolution
-   (such as a mobile, tablet, desktop, laptop, etc.) */
-/*
-@media screen and (max-width: 600px) {
-  .col-10,.col-90,input[type=submit],#tastolocalita{
-    width: 100%;
-    margin-top: 15px;
-  }
+
+.form-footer div {
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 18px;
+  color: #e6e6e6;
 }
-*/
+
+.form-footer div a {
+  color: #ffb37b;
+}
+
 /* Fine Pagina Registrazione   */
