@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head> <!-- CONTENIER DEI DATI, CI VANNO (LINK, TITLE, SCRIPT,META) -->
+  <link rel="icon" type="image/png" href="/static/Images/logo_piccolo.png"/>
+  <title>Cineticket Cinema | Film | Eventi | Orari </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Funzioni librerie carrello -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.min.css" integrity="sha512-ztsAq/T5Mif7onFaDEa5wsi2yyDn5ygdVwSSQ4iok5BPJQGYz1CoXWZSA7OgwGWrxrSrbF0K85PD5uLpimu4eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js" integrity="sha512-Nx/M3T/fWprNarYOrnl+gfWZ25YlZtSNmhjHeC0+2gCtyAdDFXqaORJBj1dC427zt3z/HwkUpPX+cxzonjUgrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- .... -->
+  <link rel="stylesheet" href="/static/stylesheet/Index.css">
+</head>
+
+<body id="body_home">
+<header>
+  <div class="Drop-menu">
+
+    <ul id="Menu">
+      <img id ="fotologo" src="/static/Images/logo_cineticket.png">
+      <li>PASS</li>
+      <li>CARD E PROMO</li>
+      <li>BUSINESS</li>
+      <li class="Logo">
+        {% if current_user.is_authenticated %}
+        <h6>Salve {{ current_user.username }} </h6>
+        <a href= "{{ url_for('logout') }}">LOG OUT</a>
+        {% endif %}
+      </li>
+    </ul>
+  </div>
+</header>
+<div data-flickity='{"cellAlign": "left", "contain": true ,"autoPlay":true ,"pauseAutoPlayOnHover": true }'>
+  <div class="carousel-cell" id = "primo">
+    <a href="UnchartedPage.html"> <!-- foto cliccabile dal carousel-cell -->
+    <img id = "primafoto" src="/static/Images/Uncharted.jpg">
+    </a>
+  </div>
+  <div class="carousel-cell" id = "secondo">
+    <a href="PaginaBlackPanther.html">
+    <img id = "secondafoto" src="/static/Images/BlackPanther.jpg">
+    </a>
+  </div>
+  <div class="carousel-cell" id= "terzo">
+    <a href="BlackAdamPage.html">
+    <img id="terzafoto" src="/static/Images/BlackAdam.jpg">
+    </a>
+  </div>
+
+  <div class="carousel-cell" id="quarto">
+    <a href="StarwarsPage.html">
+    <img id="quartafoto" src="/static/Images/Matrix.jpg">
+    </a>
+  </div>
+</div>
+
+<div class="container_home">
+  <h1>Titoli in evidenza</h1>
+<select class="tastolocalita" name="LOCALITA">
+  <option value="LOCALITA">LOCALITA</option>
+  <option value="Napoli">Napoli</option>
+  <option value="Milano">Milano</option>
+  <option value="Genova">Genova</option>
+  <option value="Palermo">Palermo</option>
+</select>
+</div>
+
+</body>
+</html>
