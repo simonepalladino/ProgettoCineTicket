@@ -40,9 +40,9 @@ class SignupForm(FlaskForm):
   surname = StringField(validators=[InputRequired(), Length(min=3, max=50), Regexp("^[A-Za-z]*$", 0, "surname must contain only characters")], render_kw={"placeholder": "Enter your surname"})
   username = StringField(validators=[InputRequired(), Length(min=6, max=50, message="Username must contain at least 6 characters"), Regexp("^[A-Za-z][A-Za-z0-9_.]*$", 0, "Username must contain characters, numbers...")], render_kw={"placeholder": "Enter your username"})
   cellular = StringField(validators=[InputRequired(), Length(min=10, max=10), Regexp("^[-+]?[0-9]+$", 0, "Mobile number can contain only numbers")], render_kw={"placeholder": "Enter your mobile number"})
-  address = StringField(validators=[InputRequired(), Length(min=5, max=50)], render_kw={"placeholder": "Enter your address"})
-  city = StringField(validators=[InputRequired(), Length(min=5, max=50)], render_kw={"placeholder": "Enter your city"})
-  state = StringField(validators=[InputRequired(), Length(min=5, max=50)], render_kw={"placeholder": "Enter your state"})
+  address = StringField(validators=[InputRequired(), Length(min=3, max=50)], render_kw={"placeholder": "Enter your address"})
+  city = StringField(validators=[InputRequired(), Length(min=1, max=50)], render_kw={"placeholder": "Enter your city"})
+  state = StringField(validators=[InputRequired(), Length(min=2, max=50)], render_kw={"placeholder": "Enter your state"})
   email = StringField(validators=[InputRequired(), Length(min=10, max=150), Regexp("[^@]+@[^@]+\.[^@]+", 0, "email is not valid")], render_kw={"placeholder": "Enter your email"})
   password = PasswordField(validators=[InputRequired(), Length(min=6, max=20)], render_kw={"placeholder": "Enter your password"})
   c_password = PasswordField(validators=[InputRequired(), Length(min=6, max=20), EqualTo("password", message="Passwords do not match")], render_kw={"placeholder": "Confirm your password"})
@@ -63,7 +63,6 @@ class LoginForm(FlaskForm):
   email = StringField(validators=[InputRequired(), Length(min=10, max=150)], render_kw={"placeholder": "Enter your email"})
   password = PasswordField(validators=[InputRequired(), Length(min=6, max=20)], render_kw={"placeholder": "Enter your password"})
   submit = SubmitField('SIGN IN')
-
 
 @app.route('/home')
 def home():
@@ -120,4 +119,4 @@ def signup():
 
 
 if __name__ == '__main__':
-  app.run(debug=True)
+  app.run(debug=True, host="localhost", port=8000)
