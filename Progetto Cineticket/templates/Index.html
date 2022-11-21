@@ -16,29 +16,29 @@
 <body id="body_home">
 <header>
   <div class="Drop-menu">
-
+    {% if current_user.is_authenticated %}
     <ul id="Menu">
       <img id ="fotologo" src="/static/Images/logo_cineticket.png">
       <li>PASS</li>
       <li>CARD E PROMO</li>
       <li>BUSINESS</li>
       <li class="Logo">
-        {% if current_user.is_authenticated %}
-        <h6>Salve {{ current_user.username }} </h6>
         <a href= "{{ url_for('logout') }}">LOG OUT</a>
-        {% endif %}
       </li>
+      <h5 id="welcome">Salve {{ current_user.username }}<span id="heart"> &hearts;</span></h5>
     </ul>
+    {% endif %}
   </div>
 </header>
-<div data-flickity='{"cellAlign": "left", "contain": true ,"autoPlay":true ,"pauseAutoPlayOnHover": true }'>
+
+<div data-flickity='{"cellAlign": "left", "contain": true ,"autoPlay": true, "pauseAutoPlayOnHover": false }'>
   <div class="carousel-cell" id = "primo">
     <a href="UnchartedPage.html"> <!-- foto cliccabile dal carousel-cell -->
     <img id = "primafoto" src="/static/Images/Uncharted.jpg">
     </a>
   </div>
   <div class="carousel-cell" id = "secondo">
-    <a href="PaginaBlackPanther.html">
+    <a href="BlackPantherPage.html">
     <img id = "secondafoto" src="/static/Images/BlackPanther.jpg">
     </a>
   </div>
