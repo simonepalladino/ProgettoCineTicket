@@ -183,7 +183,22 @@ li.fb a::before {
   font-weight: bold;
 }
 
-.the-form, #email, #password{
+.the-form, #email{
+  padding: 15px;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  transition: background .3s;
+  color: #e6e6e6;
+}
+
+#email {
+  margin-left: 14%;
+  margin-bottom: 10px;
+}
+
+.the-form, #password{
   padding: 15px;
   font-size: 16px;
   background: rgba(0, 0, 0, 0.2);
@@ -192,6 +207,10 @@ li.fb a::before {
   margin-bottom: 15px;
   transition: background .3s;
   color: #e6e6e6;
+}
+
+#password {
+  margin-left: 3.5%;
 }
 
 .the-form, #email::placeholder, #password::placeholder {
@@ -223,6 +242,7 @@ li.fb a::before {
   border-radius: 3px;
   cursor: pointer;
   margin-top: 20px;
+  margin-left: 27%;
   color: black;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }

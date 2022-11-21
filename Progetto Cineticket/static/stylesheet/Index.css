@@ -1,6 +1,6 @@
  #body_home{
-    margin: 0;
-    padding: 0;
+    height: 100%;
+    width: 100%;
     color: #222222;
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,7 +8,7 @@
     background-attachment: fixed;
     padding: 20px;
     overflow-x: hidden;
-    font-family: Tahoma;
+    font-family: Tahoma, serif;
     background-image: -ms-linear-gradient(top right, #09203f 0%, #537895 100%);
     background-image: -moz-linear-gradient(top right, #09203f 0%, #537895 100%);
     background-image: -o-linear-gradient(top right, #09203f 0%, #537895 100%);
@@ -18,10 +18,8 @@
   }
 
   #body_home, html {
-    padding: 0px;
-    margin: 0px;
-    height: 100%;
-    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   iframe {
@@ -31,10 +29,9 @@
     overflow: hidden;
   }
 
-
   header {
     background: black;
-    padding: 5px;
+    padding: 8px;
   }
 
 
@@ -49,7 +46,6 @@
   ul#Menu ul {
     margin: 2px 0 0;
     padding: 0;
-    position: relative;
     bottom: 73.40%;
     right: 21.96%;
     display: inline-block;
@@ -120,77 +116,41 @@
   }
 
 
-  #primo {
-    height: 450px;
-    width: 1400px;
-  }
-
-  #secondo {
-    height: 450px;
-    width: 1400px;
-  }
-
-  #terzo {
-    height: 450px;
-    width: 1400px;
-  }
-
-  #quarto {
-    height: 450px;
-    width: 1400px;
-  }
-
-/*
-  #primo img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-  }
-*/
-/*
-
-#primo {
-    height: 450px;
-    width: 1400px;
-  }
-
-  #secondo {
-    height: 450px;
-    width: 1400px;
-  }
-
-  #terzo {
-    height: 450px;
-    width: 1400px;
-  }
-
-    #quarto {
-    height: 450px;
-    width: 1400px;
-  }
-*/
-
-/*
-  #secondo img {
-    width: 100%;
-    height: 100%;
+  .carousel-cell, #primo {
     object-fit: cover;
+    height: 450px;
+    width: 100%;
   }
-*/
 
-/*
+  .carousel-cell, #secondo {
+    object-fit: cover;
+    height: 450px;
+    width: 100%;
+  }
+
+  .carousel-cell, #terzo {
+    object-fit: cover;
+    height: 450px;
+    width: 100%;
+  }
+
+  .carousel-cell, #quarto {
+    object-fit: cover;
+    height: 450px;
+    width: 100%;
+  }
+
   .carousel-cell  {
     height: 450px;
     width: 1400px;
-  }
-*/
-
-  .carousel-cell, #primafoto, #secondafoto, #terzafoto, #quartafoto {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin-top: 15%;
+    position: relative;
   }
 
+  #primafoto, #secondafoto, #terzafoto, #quartafoto {
+      width: 100%;
+      height: 100%;
+  }
 
   .logo {
     position: relative;
@@ -206,6 +166,14 @@
     margin-bottom: -1.00%;
     width: 5%;
     height: 5%;
+  }
+
+  #welcome {
+    color: white;
+  }
+
+  #heart{
+    color: red;
   }
 
   /* Tasto Localita */
@@ -229,10 +197,4 @@
 
   /* Fine tasto localita */
 
-
-  @media only screen and (max-width: 5120px) {
-    img{
-      width: 100%;
-    }
-  }
 
