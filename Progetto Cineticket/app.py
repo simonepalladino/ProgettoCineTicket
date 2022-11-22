@@ -5,6 +5,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError, Regexp, EqualTo
 from flask_bcrypt import Bcrypt
+from random import random
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
@@ -63,6 +64,15 @@ class LoginForm(FlaskForm):
   email = StringField(validators=[InputRequired(), Length(min=10, max=150)], render_kw={"placeholder": "Enter your email"})
   password = PasswordField(validators=[InputRequired(), Length(min=6, max=20)], render_kw={"placeholder": "Enter your password"})
   submit = SubmitField('SIGN IN')
+
+
+@app.route('/promotion')
+def promotion():
+  if current_user.is_authenticated:
+    return render_template('Promotion.html')
+  else:
+    return render_template('NotPromotion.html')
+
 
 @app.route('/home')
 def home():
