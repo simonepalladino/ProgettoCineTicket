@@ -4,7 +4,8 @@
 <head> <!-- CONTENIER DEI DATI, CI VANNO (LINK, TITLE, SCRIPT,META) -->
   <link rel="icon" type="image/png" href="/static/Images/logo_piccolo.png"/>
   <title>Cineticket Cinema | Film | Eventi | Orari </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <!-- Funzioni librerie carrello -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.min.css" integrity="sha512-ztsAq/T5Mif7onFaDEa5wsi2yyDn5ygdVwSSQ4iok5BPJQGYz1CoXWZSA7OgwGWrxrSrbF0K85PD5uLpimu4eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,7 +21,9 @@
     <ul id="Menu">
       <img id ="fotologo" src="/static/Images/logo_cineticket.png">
       <li>PASS</li>
-      <li>CARD E PROMO</li>
+      <li class="Promo">
+          <a href="{{ url_for('promotion') }}">PROMOTION</a>
+      </li>
       <li>BUSINESS</li>
       <li class="Logo">
         <a href= "{{ url_for('logout') }}">LOG OUT</a>

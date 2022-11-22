@@ -20,7 +20,9 @@
     <ul id="Menu">
       <img id ="fotologo" src="/static/Images/logo_cineticket.png">
       <li>PASS</li>
-      <li>CARD E PROMO</li>
+      <li class="Promo">
+           <a href="{{ url_for('promotion') }}">PROMOTION</a>
+      </li>
       <li>BUSINESS</li>
       <li class="Logo">
          <a href= "{{ url_for('login') }}">LOG IN</a>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/static/Images/logo_piccolo.png"/>
+  <title>Not Promotion - Cineticket </title>
+  <link rel="stylesheet" href="/static/stylesheet/Promotion.css">
+  <meta charset="UTF-8">
+</head>
+<body id="not_promotion">
+<div class="block">
+<h1 id="message">You can't have promotions because you need an account</h1>
+
+  <div class="form-footer">
+      <div>
+        <span>Don't have an account?</span> <a href="{{ url_for('signup') }}">Sign Up</a>
+      </div>
+    </div><!-- FORM FOOTER -->
+
+  <div class="form-footer">
+      <div>
+        <span>Log in to your account if you already have one</span> <a href="{{ url_for('login') }}">Login</a>
+      </div>
+    </div><!-- FORM FOOTER -->
+
+  <div class="form-footer">
+      <div>
+        <a href="{{ url_for('home') }}">HOME</a>
+      </div>
+    </div><!-- FORM FOOTER -->
+
+</div>
+</body>
+</html>
