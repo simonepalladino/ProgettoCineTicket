@@ -116,32 +116,43 @@
   }
 
 
+  header ul li.Promo {
+    border: 3px solid darkgoldenrod;
+    background-color: darkgoldenrod;
+  }
+
+  header ul li.Promo a{
+    color: white;
+    text-decoration: none;
+  }
+
+
   .carousel-cell, #primo {
     object-fit: cover;
-    height: 450px;
+    height: 700px;
     width: 100%;
   }
 
   .carousel-cell, #secondo {
     object-fit: cover;
-    height: 450px;
+    height: 700px;
     width: 100%;
   }
 
   .carousel-cell, #terzo {
     object-fit: cover;
-    height: 450px;
+    height: 700px;
     width: 100%;
   }
 
   .carousel-cell, #quarto {
     object-fit: cover;
-    height: 450px;
+    height: 700px;
     width: 100%;
   }
 
   .carousel-cell  {
-    height: 450px;
+    height: 700px;
     width: 1400px;
     margin-top: 15%;
     position: relative;

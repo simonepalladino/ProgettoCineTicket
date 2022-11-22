@@ -1,0 +1,53 @@
+#not_promotion {
+  height: 100%;
+  width: 100%;
+  color: #222222;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  overflow-x: hidden;
+  font-family: Tahoma, serif;
+  background-image: -ms-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: -moz-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: -o-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #09203f), color-stop(1, #537895));
+  background-image: -webkit-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: linear-gradient(to top right, #09203f 0%, #537895 100%);
+}
+
+.block {
+  padding: 20px;
+  color: #ffffff;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#message {
+  color: red;
+  text-shadow: 0 0 20px #FF0000, 0 0 10px #09203f;
+}
+
+.form-footer div {
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 18px;
+  color: #e6e6e6;
+}
+
+body{
+    background-color: white;
+}
+#random{
+    height: 70px;
+    width: 500px;
+    margin-left: 37%;
+    margin-top: 18%;
+    border: 3px solid red;
+}
+
+#text{
+    width: 250px;
+
+}
