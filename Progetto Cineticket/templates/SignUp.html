@@ -22,6 +22,9 @@
       </div>
       <div class="col-90">
         {{ form.name }}
+        {% for error in form.name.errors %}
+        {{ error }}
+        {% endfor%}
       </div>
     </div>
 
@@ -33,6 +36,9 @@
       </div>
       <div class="col-90">
         {{ form.surname }}
+        {% for error in form.surname.errors %}
+        {{ error }}
+        {% endfor%}
       </div>
     </div>
 
@@ -44,6 +50,9 @@
      </div>
      <div class="col-90">
        {{ form.username }}
+       {% for error in form.username.errors %}
+       {{ error }}
+       {% endfor%}
      </div>
    </div>
 
@@ -55,6 +64,9 @@
       </div>
       <div class="col-90">
         {{ form.cellular }}
+        {% for error in form.cellular.errors %}
+        {{ error }}
+        {% endfor%}
       </div>
     </div>
 
@@ -66,6 +78,9 @@
       </div>
       <div class="col-90">
         {{ form.address }}
+        {% for error in form.address.errors %}
+        {{ error }}
+        {% endfor%}
       </div>
     </div>
 
@@ -77,6 +92,9 @@
       </div>
       <div class="col-90">
         {{ form.city }}
+        {% for error in form.city.errors %}
+        {{ error }}
+        {% endfor%}
       </div>
     </div>
 
@@ -88,6 +106,9 @@
       </div>
       <div class="col-90">
         {{ form.state }}
+        {% for error in form.state.errors %}
+        {{ error }}
+        {% endfor%}
       </div>
     </div>
 
@@ -99,6 +120,9 @@
       </div>
       <div class="col-90">
         {{ form.email }}
+        {% for error in form.email.errors %}
+        {{ error }}
+        {% endfor%}
       </div>
     </div>
 
@@ -110,6 +134,9 @@
       </div>
       <div class="col-90">
         {{ form.password }}
+        {% for error in form.password.errors %}
+        {{ error }}
+        {% endfor%}
       </div>
     </div>
 
@@ -121,6 +148,9 @@
       </div>
       <div class="col-90">
         {{ form.c_password }}
+        {% for error in form.c_password.errors %}
+        {{ error }}
+        {% endfor%}
       </div>
     </div>
 

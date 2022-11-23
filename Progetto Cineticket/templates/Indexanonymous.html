@@ -23,33 +23,42 @@
       <li class="Promo">
            <a href="{{ url_for('promotion') }}">PROMOTION</a>
       </li>
-      <li>BUSINESS</li>
+      <li>CONTATTI</li>
       <li class="Logo">
          <a href= "{{ url_for('login') }}">LOG IN</a>
       </li>
     </ul>
   </div>
 </header>
-<div data-flickity='{"cellAlign": "left", "contain": true ,"autoPlay":true ,"pauseAutoPlayOnHover": true }'>
+
+<div class="form-container">
+  <input id="search-input" type="text" class="input" Placeholder="Try me...">
+  <div class="btn-container">
+    <button id="search-btn" title="Search"><i class="fa fa-search"></i></button>
+    <button id="random-btn" title="Random"><i class="fa fa-random"></i></button>
+  </div>
+</div>
+
+<div data-flickity='{"cellAlign": "left", "contain": true ,"autoPlay":true ,"pauseAutoPlayOnHover": false }'>
   <div class="carousel-cell" id = "primo">
-    <a href="UnchartedPage.html"> <!-- foto cliccabile dal carousel-cell -->
+    <a href="{{ url_for('uncharted') }}"> <!-- foto cliccabile dal carousel-cell -->
     <img id = "primafoto" src="/static/Images/Uncharted.jpg">
     </a>
   </div>
   <div class="carousel-cell" id = "secondo">
-    <a href="BlackPantherPage.html">
+    <a href="{{ url_for('blackpanther') }}">
     <img id = "secondafoto" src="/static/Images/BlackPanther.jpg">
     </a>
   </div>
   <div class="carousel-cell" id= "terzo">
-    <a href="BlackAdamPage.html">
+    <a href="{{ url_for('blackadam') }}">
     <img id="terzafoto" src="/static/Images/BlackAdam.jpg">
     </a>
   </div>
 
   <div class="carousel-cell" id="quarto">
-    <a href="StarwarsPage.html">
-    <img id="quartafoto" src="/static/Images/Matrix.jpg">
+    <a href="{{ url_for('harrypotter') }}">
+    <img id="quartafoto" src="/static/Images/harrypotter.jpg">
     </a>
   </div>
 </div>
