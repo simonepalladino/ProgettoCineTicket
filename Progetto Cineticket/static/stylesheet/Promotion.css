@@ -1,3 +1,5 @@
+/* Start Page Not Promotion */
+
 #not_promotion {
   height: 100%;
   width: 100%;
@@ -36,14 +38,25 @@
   color: #e6e6e6;
 }
 
-body{
-    background-color: white;
+/* Start Page Promotion*/
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
 }
+#promotion{
+    height: 100%;
+    background-image: url("/static/Images/cinema.jpeg");
+    background-repeat: no-repeat;
+     background-size: cover;
+}
+
 #random{
     height: 70px;
     width: 500px;
     margin-left: 37%;
-    margin-top: 18%;
+    margin-top: 17%;
     border: 3px solid red;
 }
 
