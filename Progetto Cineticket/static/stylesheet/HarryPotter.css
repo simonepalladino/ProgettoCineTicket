@@ -1,0 +1,25 @@
+#body_starwars{
+  margin: 0;
+  padding: 0;
+  color: #222222;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  overflow-x: hidden;
+  font-family: Tahoma;
+  background-image: -ms-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: -moz-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: -o-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #09203f), color-stop(1, #537895));
+  background-image: -webkit-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: linear-gradient(to top right, #09203f 0%, #537895 100%);
+}
+
+#body_starwars, html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
