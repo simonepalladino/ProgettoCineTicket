@@ -194,7 +194,7 @@ li.fb a::before {
 }
 
 #email {
-  margin-left: 14%;
+  margin-left: 11%;
   margin-bottom: 10px;
 }
 
@@ -210,7 +210,7 @@ li.fb a::before {
 }
 
 #password {
-  margin-left: 3.5%;
+  margin-left: 1%;
 }
 
 .the-form, #email::placeholder, #password::placeholder {
