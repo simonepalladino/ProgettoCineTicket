@@ -70,13 +70,9 @@ def blackpanther():
   return render_template('BlackPantherPage.html')
 
 
-
-
 @app.route('/blackadam')
 def blackadam():
   return render_template('BlackAdamPage.html')
-
-
 
 
 @app.route('/uncharted')
@@ -84,11 +80,9 @@ def uncharted():
   return render_template('UnchartedPage.html')
 
 
-
 @app.route('/harrypotter')
 def harrypotter():
   return render_template('HarrypotterPage.html')
-
 
 
 @app.route('/promotion')
@@ -97,6 +91,11 @@ def promotion():
     return render_template('Promotion.html')
   else:
     return render_template('NotPromotion.html')
+
+
+@app.route('/contacts')
+def contacts():
+  return render_template('Contacts.html')
 
 
 @app.route('/home')
