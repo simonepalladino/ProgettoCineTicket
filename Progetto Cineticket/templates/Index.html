@@ -19,11 +19,12 @@
     {% if current_user.is_authenticated %}
     <ul id="Menu">
       <img id ="fotologo" src="/static/Images/logo_cineticket.png">
-      <li>PASS</li>
       <li class="Promo">
           <a href="{{ url_for('promotion') }}">PROMOTION</a>
       </li>
-      <li>CONTATTI</li>
+      <li class="contacts">
+        <a href="{{ url_for('contacts') }}">CONTACTS</a>
+      </li>
       <li class="Logo">
         <a href= "{{ url_for('logout') }}">LOG OUT</a>
       </li>
