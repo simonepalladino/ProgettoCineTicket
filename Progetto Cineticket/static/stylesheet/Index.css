@@ -126,6 +126,16 @@
     text-decoration: none;
   }
 
+   header ul li.contacts {
+    border: 2px solid darkgoldenrod;
+    background-color: darkgoldenrod;
+  }
+
+  header ul li.contacts a{
+    color: white;
+    text-decoration: none;
+  }
+
 
   .carousel-cell, #primo {
     object-fit: cover;
