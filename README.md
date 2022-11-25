@@ -1,8 +1,8 @@
 # ProgettoCineTicket
 
-CineTicket è un sito web che si occupa di cinema, permette agli utenti di registrarsi e loggarsi. Gli utenti che possiedono un account hanno la possibilità di ricevere una promozione da riscattare una volta arrivati al cinema.
+CineTicket is a website that deals with cinema, allows users to register and log in. Users who have an account have the option to receive a promotion to redeem once they arrive at the cinema.
 
-COMPONENTI UTILIZZATI
+COMPONENTS USED
 
 1. Python3
 2. Flask
@@ -11,7 +11,7 @@ COMPONENTI UTILIZZATI
 5. Javascript
 6. CSS
 
-INSTALLAZIONE COMPONENTI PROGETTO
+INSTALLATION OF PROJECT COMPONENTS
 
 pip3 install -r requirements.txt
 
