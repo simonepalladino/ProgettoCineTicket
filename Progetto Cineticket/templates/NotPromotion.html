@@ -4,6 +4,7 @@
   <link rel="icon" type="image/png" href="/static/Images/logo_piccolo.png"/>
   <title>Not Promotion - Cineticket </title>
   <link rel="stylesheet" href="/static/stylesheet/Promotion.css">
+  <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
 </head>
 <body id="not_promotion">
@@ -12,19 +13,19 @@
 
   <div class="form-footer">
       <div>
-        <span>Don't have an account?</span> <a href="{{ url_for('signup') }}">Sign Up</a>
+        <span>Don't have an account?</span> <a href="{{ url_for('signup') }}"><button id="btn001">SIGN UP</button></a> <i class="fa-sharp fa-solid fa-user-plus"></i>
       </div>
     </div><!-- FORM FOOTER -->
 
   <div class="form-footer">
       <div>
-        <span>Log in to your account if you already have one</span> <a href="{{ url_for('login') }}">Login</a>
+        <span>Log in to your account if you already have one</span> <a href="{{ url_for('login') }}"><button id="btn002">LOGIN</button></a> <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
       </div>
     </div><!-- FORM FOOTER -->
 
   <div class="form-footer">
       <div>
-        <a href="{{ url_for('home') }}">HOME</a>
+        <a href="{{ url_for('home') }}"><button id="btn003"><i id="houseicon" class="fa-sharp fa-solid fa-house"></i></button></a>
       </div>
     </div><!-- FORM FOOTER -->
 
