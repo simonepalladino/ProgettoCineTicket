@@ -38,43 +38,43 @@
   color: #e6e6e6;
 }
 
+#btn001 {
+  background: darkgoldenrod;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: black;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+#btn002 {
+  background: darkgoldenrod;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: black;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+#btn003 {
+  background: darkgoldenrod;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: black;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+#houseicon {
+  color: black;
+}
+
+
 /* Start Page Promotion*/
-/*
-html{
-    position: relative;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-#promotion{
-    position: absolute;
-    height: 100vh;
-    background-image: url("/static/images/cinema.jpeg") ;
-    background-repeat: no-repeat;
-     background-size: cover;
-    background-position: center;
 
-}
-
-.form-box{
-    width: 100%;
-    background: rgba(0,0,0,0.8);
-    padding: 50px 0;
-
-}
-
-.random{
-    margin: 31% auto;
-    height: 400px;
-    width: 400px;
-    border: 3px solid red;
-}
-
-#text{
-    width: 250px;
-
-}
-*/
 *{
     margin: 0;
     padding: 0;
@@ -115,4 +115,19 @@ a{
 h3{
   color: white;
   text-align: center;
+}
+
+#btn004 {
+  margin-left: 20%;
+  background: darkgoldenrod;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: black;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+#backbutton {
+  color: black;
 }
