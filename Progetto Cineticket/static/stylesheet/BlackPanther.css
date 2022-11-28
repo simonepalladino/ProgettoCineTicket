@@ -6,9 +6,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  padding: 20px;
   overflow-x: hidden;
-  font-family: Tahoma;
+  font-family: Tahoma, serif;
   background-image: -ms-linear-gradient(top right, #09203f 0%, #537895 100%);
   background-image: -moz-linear-gradient(top right, #09203f 0%, #537895 100%);
   background-image: -o-linear-gradient(top right, #09203f 0%, #537895 100%);
@@ -17,9 +16,41 @@
   background-image: linear-gradient(to top right, #09203f 0%, #537895 100%);
 }
 
-#body_panther, html {
+#body_blackpanther, html {
   padding: 0px;
   margin: 0px;
   height: 100%;
   width: 100%;
 }
+
+.c4l-rating input[name="c4l-rating"]
+{ display: none;
+}
+.c4l-rating input[name="c4l-rating"] + label:after {
+  content: none;
+}
+.c4l-rating input[name="c4l-rating"] + label {
+  font-family: 'FontAwesome';
+}
+.c4l-rating input[name="c4l-rating"] + label:before {
+    background-color: transparent;
+    border: none;
+    color: #ffc107;
+    content: '\f005';
+    font-size: 1.33333333em;
+    transition: none;
+}
+.c4l-rating input[name="c4l-rating"]:checked ~ label:before {
+    background-color: transparent;
+    border: none;
+    color: #607d8b;
+}
+
+.c4l-rating input[name="c4l-rating"]:checked + label:before {
+  color: #ffc107;
+}
+
+.c4l-rating input[name="c4l-rating"] + label:hover ~ input + label:before {
+  opacity: 0.6;
+}
+

@@ -1,4 +1,4 @@
-#body_starwars{
+#body_harrypotter{
   margin: 0;
   padding: 0;
   color: #222222;
@@ -17,9 +17,41 @@
   background-image: linear-gradient(to top right, #09203f 0%, #537895 100%);
 }
 
-#body_starwars, html {
+#body_harrypotter, html {
   padding: 0px;
   margin: 0px;
   height: 100%;
   width: 100%;
 }
+
+.c4l-rating input[name="c4l-rating"]
+{ display: none;
+}
+.c4l-rating input[name="c4l-rating"] + label:after {
+  content: none;
+}
+.c4l-rating input[name="c4l-rating"] + label {
+  font-family: 'FontAwesome';
+}
+.c4l-rating input[name="c4l-rating"] + label:before {
+    background-color: transparent;
+    border: none;
+    color: #ffc107;
+    content: '\f005';
+    font-size: 1.33333333em;
+    transition: none;
+}
+.c4l-rating input[name="c4l-rating"]:checked ~ label:before {
+    background-color: transparent;
+    border: none;
+    color: #607d8b;
+}
+
+.c4l-rating input[name="c4l-rating"]:checked + label:before {
+  color: #ffc107;
+}
+
+.c4l-rating input[name="c4l-rating"] + label:hover ~ input + label:before {
+  opacity: 0.6;
+}
+

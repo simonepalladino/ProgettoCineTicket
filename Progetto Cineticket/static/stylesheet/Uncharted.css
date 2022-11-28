@@ -24,3 +24,34 @@
   width: 100%;
 }
 
+.c4l-rating input[name="c4l-rating"]
+{ display: none;
+}
+.c4l-rating input[name="c4l-rating"] + label:after {
+  content: none;
+}
+.c4l-rating input[name="c4l-rating"] + label {
+  font-family: 'FontAwesome';
+}
+.c4l-rating input[name="c4l-rating"] + label:before {
+    background-color: transparent;
+    border: none;
+    color: #ffc107;
+    content: '\f005';
+    font-size: 1.33333333em;
+    transition: none;
+}
+.c4l-rating input[name="c4l-rating"]:checked ~ label:before {
+    background-color: transparent;
+    border: none;
+    color: #607d8b;
+}
+
+.c4l-rating input[name="c4l-rating"]:checked + label:before {
+  color: #ffc107;
+}
+
+.c4l-rating input[name="c4l-rating"] + label:hover ~ input + label:before {
+  opacity: 0.6;
+}
+

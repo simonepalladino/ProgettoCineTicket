@@ -1,3 +1,4 @@
+
 #body_blackadam{
   margin: 0;
   padding: 0;
@@ -129,7 +130,9 @@ header ul li.Logo a {
   height: 5%;
 }
 
-.video_trailer {
+.container1 {
+  position: relative;
+
   width: 100%;
   height: 50%;
  /* border-style: solid;*/
@@ -142,7 +145,7 @@ header ul li.Logo a {
   position: relative;
   left: 0%;
   height: 100%;
-  object-fit: cover;
+
 }
 
 .foto_blackadam{
@@ -152,10 +155,8 @@ header ul li.Logo a {
   height: 100.08%;
   position: relative;
   bottom: 100.9%;
-  left: 40.1%;
+  left: -0.2%;
   object-fit: cover;
-
-
 
 }
 #poster_blackadam{
@@ -166,6 +167,10 @@ header ul li.Logo a {
 }
 
 .titolo_blackadam{
+  border-color:firebrick ;
+}
+#fotologo{
+  object-fit: cover;
 
 }
 
@@ -175,13 +180,58 @@ header ul li.Logo a {
 }
 .trama_blackadam{
   border-color:firebrick ;
-  border-style: solid;
   width: 100%;
-  height: 100.08%;
+  height: 164.08%;
   position: relative;
   bottom: 202.5%;
-  left: 60%;
+  left: 19.8%;
   object-fit: cover;
+  background-color:black;
+  opacity: 0.8;
 
+}
+#titolo{
+  position: relative;
+  bottom: 4.1%;
+  font-family: "Audiowide", sans-serif;
+  background-color:#FFF39F ;
+}
+
+.testo_trama{
+position: relative;
+bottom: 4.1%;
+  color: #FFF39F;
+
+}
+
+.c4l-rating input[name="c4l-rating"]
+{ display: none;
+}
+.c4l-rating input[name="c4l-rating"] + label:after {
+  content: none;
+}
+.c4l-rating input[name="c4l-rating"] + label {
+  font-family: 'FontAwesome';
+}
+.c4l-rating input[name="c4l-rating"] + label:before {
+    background-color: transparent;
+    border: none;
+    color: #ffc107;
+    content: '\f005';
+    font-size: 1.33333333em;
+    transition: none;
+}
+.c4l-rating input[name="c4l-rating"]:checked ~ label:before {
+    background-color: transparent;
+    border: none;
+    color: #607d8b;
+}
+
+.c4l-rating input[name="c4l-rating"]:checked + label:before {
+  color: #ffc107;
+}
+
+.c4l-rating input[name="c4l-rating"] + label:hover ~ input + label:before {
+  opacity: 0.6;
 }
 
