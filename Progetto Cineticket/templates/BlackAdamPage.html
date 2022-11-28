@@ -1,11 +1,14 @@
+<!-- -->
 <!doctype html>
 <html>
 
 <head> <!-- CONTENIER DEI DATI, CI VANNO (LINK, TITLE, SCRIPT,META) -->
   <link rel="icon" type="image/png" href="/static/Images/logo_piccolo.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 
   <title>Cineticket Cinema | Film | Eventi | Orari </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/static/stylesheet/BlackAdam.css">
 </head>
 
@@ -24,24 +27,50 @@
   </div>
 </header>
 
-<div class="video_trailer">
+<div class="container1">
   <div class="titolo_blackadam">
-    <h1 id="presentazione"> BLACKADAM </h1>
-    </div>
+    <img id = "logoblack" src="/static/Images/blackadamposter.jpeg">
+  </div>
 
-
-  <video id= "trailer_blackadam" width="600" height="280" controls autoplay muted>
-    <source src="/static/Videos/trailer_blackadam.mp4" type="video/mp4">
-  </video>
-    <div class="foto_blackadam">
-      <img id="poster_blackadam" src="/static/Images/Black-Adam_Character-Poster-Italia-1.jpeg">
-    </div>
   <div class="trama_blackadam">
-    <h1>BLACK ADAM </h1>
-    <p>Dopo 5000 anni di prigionia, Black Adam viene liberato dalla sua tomba terrena e<p>
+    <h1 id = "titolo">BLACK ADAM </h1>
+    <div class="testo_trama">
+      <p>Dopo 5000 anni di prigionia, Black Adam viene liberato dalla sua tomba terrena e<p>
       <p>si prepara a scatenare la sua particolare forma di giustizia nel mondo moderno.</p>
+      <p>Black Adam, il cui vero nome è Theo-Adam o Teth Adam, è un personaggio immaginario dei fumetti DC Comics.
+        Ha ottenuto i poteri del Tuono derivanti dall'antica Magia che governava le leggi del Mondo dal Mago Shazam
+        originariamente pensato per comparire in una sola storia, divenne un nemico abituale della Famiglia Marvel.
+        Col tempo si definisce come uno dei tre arcinemici di Capitan Marvel (tra cui il Dottor Sivana e Mr. Mind),
+        creato dallo stesso Mago per opporvisi. Nel corso di diversi decenni di pubblicazione il personaggio è andato incontro a
+        diversi retcon della sua storia, processo supportato dal fatto che è stato pubblicato da 2 case editrici quali
+        la Fawcett Comics (dal 1945 al 1956) e in seguito dalla DC Comics (dal 1973). Con gli anni è stato ridefinito nel ruolo passando
+        da supercriminale ad antieroe ed alleato della Justice Society, seppure con una certa riluttanza e malinconia.
+        Nel corso della sua lunga vita editoriale ha avuto tre origini differenti, l'ultima versione e quella canonica alle attuali pubblicazioni
+        DC è stata concepita da Geoff Johns e Gary Frank (dal 2012).
+        È stato più volte inserito nella classifica stilata dal sito IGN sui cento più grandi supercriminali nella storia dei fumetti.</p>
+    </div>
+  </div>
+
+<div class="c4l-rating">
+  <input name="c4l-rating" type="radio" id="c4l-rate1" value="1" />
+  <label for="c4l-rate1"></label>
+
+  <input name="c4l-rating" type="radio" id="c4l-rate2" value="2" />
+  <label for="c4l-rate2"></label>
+
+  <input name="c4l-rating" type="radio" id="c4l-rate3" value="3" />
+  <label for="c4l-rate3"></label>
+
+  <input name="c4l-rating" type="radio" id="c4l-rate4" value="4" />
+  <label for="c4l-rate4"></label>
+
+  <input name="c4l-rating" type="radio" id="c4l-rate5" value="5" checked />
+  <label for="c4l-rate5"></label>
 </div>
+
 </div>
+
+
 </body>
 </html>
 
