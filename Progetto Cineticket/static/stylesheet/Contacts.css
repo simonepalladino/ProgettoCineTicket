@@ -1,4 +1,26 @@
- #body_contacts{
+/* @media, It is a CSS query used for adopting all the screen resolution
+   (such as a mobile, tablet, desktop, laptop, etc.) */
+
+@media only screen and (max-width: 500px) {
+  .body_contacts {
+    padding: 50px 40px;
+  }
+}
+
+@media only screen and (max-width: 455px) {
+  .body_contacts {
+    padding: 45px 30px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .body_contacts {
+    padding: 30px 20px;
+  }
+}
+
+
+.body_contacts{
     height: 100%;
     width: 100%;
     color: #222222;
@@ -17,7 +39,40 @@
     background-image: linear-gradient(to top right, #09203f 0%, #537895 100%);
   }
 
-  #body_contacts, html {
-    padding: 0;
-    margin: 0;
-  }
+#textone{
+  text-align: center;
+  color: darkgoldenrod;
+}
+
+#contacts{
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: #30404d;
+  overflow: hidden;
+  padding: 50px;
+  border-radius: 3px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+#table1, th, td
+{
+  width: 100%;
+  border: 2px black solid;
+  border-collapse: collapse;
+  color: white;
+}
+
+th, td{
+   padding: 15px;
+}
+
+#div0001{
+  padding: 10px;
+  margin-left: 40%;
+  margin-right: 55%;
+}
+
+#btn0004{
+  padding: 10px;
+  background-color: darkgoldenrod;
+}
