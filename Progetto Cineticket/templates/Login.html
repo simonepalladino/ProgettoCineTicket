@@ -27,14 +27,15 @@
         {{ form.hidden_tag() }}
         <div>
           <label>Email:</label>
-        {{ form.email }}
+            {{ form.email }}
         </div>
         <div>
           <label>Password:</label>
-        {{ form.password }}
+            {{ form.password }}
         </div>
         <div>
-        {{ form.submit }}
+          {{msg}}
+          {{ form.submit }}
         </div>
       </form>
 

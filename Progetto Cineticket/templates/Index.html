@@ -22,14 +22,11 @@
     <ul id="Menu">
       <img id ="fotologo" src="/static/Images/logo_cineticket.png">
       <li class="Promo">
-          <a href="{{ url_for('promotion') }}">PROMOTION</a>
+        <a href="{{ url_for('promotion') }}">PROMOTION</a>
       </li>
       <li class="contacts">
         <a href="{{ url_for('contacts') }}">CONTACTS</a>
       </li>
-       <li>
-           <a href="{{ url_for('search') }}">SEARCH</a>
-       </li>
       <li class="Logo">
         <a href= "{{ url_for('logout') }}">LOG OUT</a>
       </li>
@@ -38,15 +35,8 @@
     </ul>
     {% endif %}
   </div>
-</header>
 
-<div class="form-container">
-  <input id="search-input" type="text" class="input" Placeholder="Search movies...">
-  <div class="btn-container">
-    <button id="search-btn" title="Search"><i class="fa fa-search"></i></button>
-    <button id="random-btn" title="Random"><i class="fa fa-random"></i></button>
-  </div>
-</div>
+</header>
 
 <div data-flickity='{"cellAlign": "left", "contain": true ,"autoPlay": true, "pauseAutoPlayOnHover": false }'>
 
@@ -77,14 +67,40 @@
 </div>
 
 <div class="container_home">
-  <h1>Titoli in evidenza</h1>
-<select class="tastolocalita" name="LOCALITA">
-  <option value="LOCALITA">LOCALITA</option>
-  <option value="Napoli">Napoli</option>
-  <option value="Milano">Milano</option>
-  <option value="Genova">Genova</option>
-  <option value="Palermo">Palermo</option>
-</select>
+  <h1 id="evidence">Titoli in evidenza</h1>
+  <br>
+    <form  id="form">
+      <div class="form-container">
+        <input id="search" type="text" class="search" Placeholder="Search movies...">
+      <div class="btn-container">
+        <button id="search-btn" title="Search"><i class="fa fa-search"></i></button>
+      </div>
+      </div>
+    </form>
+<br>
+  <div id="tags"></div>
+    <div id="myNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content" id="overlay-content"></div>
+
+      <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a>
+
+      <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
+
+    </div>
+
+  <main id="main"></main>
+    <div class="pagination">
+      <div class="page" id="prev">Previous Page</div>
+      <div class="current" id="current">1</div>
+      <div class="page" id="next">Next Page</div>
+    </div>
+
+<script src="/static/js/Search.js"></script>
 </div>
 
 </body>
