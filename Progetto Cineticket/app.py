@@ -98,6 +98,11 @@ def contacts():
   return render_template('Contacts.html')
 
 
+@app.route('/search')
+def search():
+  return render_template('Search.html')
+
+
 @app.route('/home')
 def home():
   if current_user.is_authenticated:
