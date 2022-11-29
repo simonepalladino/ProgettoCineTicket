@@ -16,6 +16,7 @@
 
 <body id="body_home">
 <header>
+
   <div class="Drop-menu">
     {% if current_user.is_authenticated %}
     <ul id="Menu">
@@ -26,9 +27,13 @@
       <li class="contacts">
         <a href="{{ url_for('contacts') }}">CONTACTS</a>
       </li>
+       <li>
+           <a href="{{ url_for('search') }}">SEARCH</a>
+       </li>
       <li class="Logo">
         <a href= "{{ url_for('logout') }}">LOG OUT</a>
       </li>
+
       <h5 id="welcome">Salve {{ current_user.username }}<span id="heart"> &hearts;</span></h5>
     </ul>
     {% endif %}
