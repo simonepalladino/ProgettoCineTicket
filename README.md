@@ -15,3 +15,11 @@ INSTALLATION OF PROJECT COMPONENTS
 
 pip3 install -r requirements.txt
 
+START SERVER
+
+python3 app.py ----> ON MAC
+python app.py ----> ON WINDOWS
+
+the server will start from port 8000 previously chosen via python
+
+Now everything is ready, you can have fun on our website!
