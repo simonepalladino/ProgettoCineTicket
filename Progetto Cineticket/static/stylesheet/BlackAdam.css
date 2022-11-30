@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap');
 #body_blackadam{
   margin: 0;
-  padding: 0;
   color: #222222;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,7 +8,7 @@
   background-attachment: fixed;
   padding: 20px;
   overflow-x: hidden;
-  font-family: Tahoma;
+  font-family: Tahoma, serif;
   background-image: -ms-linear-gradient(top right, #09203f 0%, #537895 100%);
   background-image: -moz-linear-gradient(top right, #09203f 0%, #537895 100%);
   background-image: -o-linear-gradient(top right, #09203f 0%, #537895 100%);
@@ -138,9 +137,9 @@ header ul li.Logo a {
 }
 
 .menu_blackadam{
-
+  margin-top: 2%;
   width: 100%;
-  height: 50%;
+  height: 30%;
 
 
 
@@ -151,10 +150,11 @@ header ul li.Logo a {
   border-color:#f8a612 ;
   position: relative;
   bottom: 1%;
+  margin-left: 3%;
 
 }
 #poster_blackadam{
-  width: 100%;
+  width: 80%;
   height: 100%;
 }
 
@@ -204,15 +204,30 @@ header ul li.Logo a {
   font-family: "Audiowide", sans-serif;
   color: white;
   position: relative;
-  bottom: 8.5%;
+  bottom: 7%;
 
 }
 #regista{
   color: #8e8e8e;
   position: relative;
-  bottom: 13.8%;
+  bottom: 10%;
 
 }
+
+#regia2{
+  font-family: "Audiowide", sans-serif;
+  color: white;
+  position: relative;
+  bottom: 3%;
+
+}
+#regista2{
+  color: #8e8e8e;
+  position: relative;
+  bottom: 6%;
+
+}
+
 .tra_blackadam{
 
   width: 40%;
@@ -226,7 +241,7 @@ header ul li.Logo a {
   font-family: "Audiowide", sans-serif;
   color: white;
   position: relative;
-  bottom: -0.5%;
+  bottom: -2%;
 }
 #testo_trama{
   color: #8e8e8e;
@@ -244,6 +259,51 @@ header ul li.Logo a {
 }
 .read-more-text--show{
     display: inline;
+}
+
+.reviewtext{
+  margin-top: -33%;
+  margin-left: 45%;
+}
+
+#textreview{
+  color: white;
+  font-family: Audiowide, sans-serif;
+}
+
+.rating{
+  margin-top: 2%;
+  margin-left: 45%;
+}
+.c4l-rating input[name="c4l-rating"] {
+  display: none;
+}
+.c4l-rating input[name="c4l-rating"] + label:after {
+  content: none;
+}
+.c4l-rating input[name="c4l-rating"] + label {
+  font-family: FontAwesome, serif;
+}
+.c4l-rating input[name="c4l-rating"] + label:before {
+    background-color: transparent;
+    border: none;
+    color: #ffc107;
+    content: '\f005';
+    font-size: 1.33333333em;
+    transition: none;
+}
+.c4l-rating input[name="c4l-rating"]:checked ~ label:before {
+    background-color: transparent;
+    border: none;
+    color: #607d8b;
+}
+
+.c4l-rating input[name="c4l-rating"]:checked + label:before {
+  color: #ffc107;
+}
+
+.c4l-rating input[name="c4l-rating"] + label:hover ~ input + label:before {
+  opacity: 0.6;
 }
 
 
