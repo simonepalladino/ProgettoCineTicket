@@ -22,25 +22,26 @@ pip3 install -r requirements.txt
 
 After writing the classes (even the user class) of the database on python we can proceed with the configuration of the database and the creation inside the folder path of our project.
 
-select the project folder path via the ```cd``` command
-write in the terminal ```python3``` to use python
-write in the terminal ```from app import db```
-write in the terminal ```db.create_all()```
-write in the terminal ```exit()```
+- select the project folder path via the ```cd``` command
+- write in the terminal ```python3``` to use python
+- write in the terminal ```from app import db```
+- write in the terminal ```db.create_all()```
+- write in the terminal ```exit()```
 
 
 ## SQL LITE MENU VIA TERMINAL:
 
-select the project folder path via the ```cd``` command
-write in the terminal ```sqlite3 database.db``` and press enter
-write in the terminal ```.tables``` to view all the tables of the database
-write in the terminal ```.exit()``` to leave
+- select the project folder path via the ```cd``` command
+- write in the terminal ```sqlite3 database.db``` and press enter
+- write in the terminal ```.tables``` to view all the tables of the database
+- write in the terminal ```.exit()``` to leave
 
 
 ## START SERVER:
 
-select the project folder path via the ```cd``` command
-```python3 app.py``` ----> ON MAC OR ```python app.py``` ----> ON WINDOWS
+- select the project folder path via the ```cd``` command
+- ```python3 app.py``` ----> ON MAC OR ```python app.py``` ----> ON WINDOWS
+
 the server will start from port 8000 previously chosen via python
 
-Now everything is ready, you can have fun on our website!
+# Now everything is ready, you can have fun on our website!
