@@ -9,6 +9,8 @@
   <title>Cineticket Cinema | Film | Eventi | Orari </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/stylesheet/BlackAdam.css">
+  <link rel="stylesheet" href="/static/stylesheet/Index.css">
+  <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -16,67 +18,86 @@
 <header id="header_blackadam">
   <div class="Drop-menu_blackadam">
     <ul id="Menu">
-      <img id ="fotologo" src="/static/Images/logo_cineticket.png">
-      <li>PASS</li>
-      <li>CARD E PROMO</li>
-      <li>BUSINESS</li>
-      <li class="Logo">
-        <a href="login%20page.html">LOG IN</a>
+      <a href="{{ url_for('home') }}"><img id ="fotologo" src="/static/Images/logo_cineticket.png"></a>
+      <li class="Promo">
+        <a href="{{ url_for('promotion') }}">PROMOTION</a>
+      </li>
+      <li class="contacts">
+        <a href="{{ url_for('contacts') }}">CONTACTS</a>
       </li>
     </ul>
+
   </div>
 </header>
 
 <div class="menu_blackadam">
+  <div class = "container_img_black">
+    <img id="poster_blackadam" src="/static/Images/blackadamposter.jpeg">
+  </div>
 
-        <div class = "container_img_black">
-            <img id="poster_blackadam" src="/static/Images/blackadamposter.jpeg">
-        </div>
+  <div class= "titolo_blackadam">
+    <h1 id="titolo">BLACK ADAM </h1>
+  </div>
 
-        <div class= "titolo_blackadam">
-            <h1 id="titolo">BLACK ADAM </h1>
-        </div>
+  <div class="cast_blackadam">
+    <h1 id = "titolo_cast">Cast: </h1>
+    <p id = "Dwayne">Dwayne Johnson: Black Adam <br>
+      Aldis Hodge: Hawkman <br>
+      Noah Centineo: Atom Smasher<br>
+      Sarah Shahi: Adrianna Tomaz<br>
+      Marwan Kenzari: Sabbac<br>
+      Quintessa Swindell: Maxine Hunkell<br>
+      Pierce Brosnan: Dottor Fate<br>
+    </p>
+  </div>
 
-        <div class="cast_blackadam">
-            <h1 id = "titolo_cast">Cast: </h1>
-            <p id = "Dwayne">Dwayne Johnson: Black Adam <br>
-                Aldis Hodge: Hawkman <br>
-                Noah Centineo: Atom Smasher<br>
-                Sarah Shahi: Adrianna Tomaz<br>
-                Marwan Kenzari: Sabbac<br>
-                Quintessa Swindell: Maxine Hunkell<br>
-                Pierce Brosnan: Dottor Fate<br>
-            </p>
-        </div>
+  <div class="regia_blackadam">
+    <h1 id ="regia">Regia: </h1>
+    <p id = "regista">Jaume Collet-Serra</p>
+    <h1 id ="regia2">Data uscita: </h1>
+    <p id = "regista2">20/10/2022</p>
+  </div>
 
-        <div class="regia_blackadam">
-            <h1 id ="regia">Regia: </h1>
-              <p id = "regista">Jaume Collet-Serra</p>
-            <h1 id ="regia">Data uscita: </h1>
-              <p id = "regista">20/10/2022</p>
+  <div class="tra_blackadam">
+    <h1 id ="trama">Trama: </h1>
+    <p id ="testo_trama">
+      Black Adam, il film diretto da Jaume Collet-Serra, vede protagonista Dwayne Johnson nei panni dell'anti-eroe della DC Comics, creato da Otto Binder e C. C. Beck nel 1945.
+      Black Adam, il cui vero nome e' Teth-Adam o Theo Adam, e' un uomo dell'Antico Egitto ridotto in schiavitu' e
+      in seguito ucciso, che grazie al potere del mago Shazam ritorna in vita.
+      <span class="read-more-text">
+        Adesso a Black Adam, questo il nome del supereroe, sono stati conferiti grandi poteri, come forza, agilita'
+        e la capacità di volare, ma nonostante queste doti, il suo cuore non e' puro.
+        Dopo essere stato a lungo imprigionato, Black Adam viene liberato e dovra' confrontarsi con i
+        supereroi in vita per capire che, non solo un grande potere, ma anche nobili azioni e sacrificio
+        fanno di un uomo un eroe.
+      </span>
+      <span class="read-more-btn">Read More...</span>
+  </div>
 
-        </div>
+  <div class="reviewtext">
+    <h3 id="textreview">LEAVE A REVIEW</h3>
+  </div>
 
-        <div class="tra_blackadam">
-             <h1 id ="trama">Trama: </h1>
+  <div class="rating">
+    <div class="c4l-rating">
+      <input name="c4l-rating" type="radio" id="c4l-rate1" value="1" />
+      <label for="c4l-rate1"></label>
 
-                <p id ="testo_trama">
-                  Black Adam, il film diretto da Jaume Collet-Serra, vede protagonista Dwayne Johnson nei panni dell'anti-eroe della DC Comics, creato da Otto Binder e C. C. Beck nel 1945.
-                    Black Adam, il cui vero nome e' Teth-Adam o Theo Adam, e' un uomo dell'Antico Egitto ridotto in schiavitu' e
-                    in seguito ucciso, che grazie al potere del mago Shazam ritorna in vita.
-                    <span class="read-more-text">
-                         Adesso a Black Adam, questo il nome del supereroe, sono stati conferiti grandi poteri, come forza, agilita'
-                    e la capacità di volare, ma nonostante queste doti, il suo cuore non e' puro.
-                    Dopo essere stato a lungo imprigionato, Black Adam viene liberato e dovra' confrontarsi con i
-                    supereroi in vita per capire che, non solo un grande potere, ma anche nobili azioni e sacrificio
-                    fanno di un uomo un eroe.
-                    </span>
-        <span class="read-more-btn">Read More...</span>
-        </div>
+      <input name="c4l-rating" type="radio" id="c4l-rate2" value="2" />
+      <label for="c4l-rate2"></label>
 
+      <input name="c4l-rating" type="radio" id="c4l-rate3" value="3" />
+      <label for="c4l-rate3"></label>
+
+      <input name="c4l-rating" type="radio" id="c4l-rate4" value="4" />
+      <label for="c4l-rate4"></label>
+
+      <input name="c4l-rating" type="radio" id="c4l-rate5" value="5" checked />
+      <label for="c4l-rate5"></label>
+  </div>
+  </div>
 
 </div>
 <script src="/static/js/Readmore.js"></script>
 </body>
 </html>
-

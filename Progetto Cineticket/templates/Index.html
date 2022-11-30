@@ -20,7 +20,7 @@
   <div class="Drop-menu">
     {% if current_user.is_authenticated %}
     <ul id="Menu">
-      <img id ="fotologo" src="/static/Images/logo_cineticket.png">
+      <a href="{{ url_for('home') }}"><img id ="fotologo" src="/static/Images/logo_cineticket.png"></a>
       <li class="Promo">
         <a href="{{ url_for('promotion') }}">PROMOTION</a>
       </li>
