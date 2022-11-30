@@ -45,8 +45,8 @@ SQL LITE MENU VIA TERMINAL:
 
 START SERVER:
 
-python3 app.py ----> ON MAC
-python app.py ----> ON WINDOWS
+1. select the project folder path via the "cd" command
+2. python3 app.py ----> ON MAC     OR     python app.py ----> ON WINDOWS
 
 the server will start from port 8000 previously chosen via python
 
