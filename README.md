@@ -14,6 +14,7 @@
 
 select the project folder path via the ```cd``` command
 
+Now write in the terminal:
 ```
 pip3 install -r requirements.txt
 ```
