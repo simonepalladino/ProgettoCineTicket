@@ -1,27 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="/static/stylesheet/HarryPotter.css">
+<!-- -->
+<!doctype html>
+<html>
+
+<head> <!-- CONTENIER DEI DATI, CI VANNO (LINK, TITLE, SCRIPT,META) -->
+  <link rel="icon" type="image/png" href="/static/Images/logo_piccolo.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+  <title>Cineticket Cinema | Film | Eventi | Orari </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/stylesheet/BlackAdam.css">
+  <link rel="stylesheet" href="/static/stylesheet/Index.css">
   <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
-  <title>Harry Potter</title>
+
 </head>
-<body id="body_harrypotter">
-<div class="c4l-rating">
-  <input name="c4l-rating" type="radio" id="c4l-rate1" value="1" />
-  <label for="c4l-rate1"></label>
 
-  <input name="c4l-rating" type="radio" id="c4l-rate2" value="2" />
-  <label for="c4l-rate2"></label>
+<body id="body_blackadam">
+<header id="header_blackadam">
+  <div class="Drop-menu_blackadam">
+    <ul id="Menu">
+      <a href="{{ url_for('home') }}"><img id ="fotologo" src="/static/Images/logo_cineticket.png"></a>
+      <li class="Promo">
+        <a href="{{ url_for('promotion') }}">PROMOTION</a>
+      </li>
+      <li class="contacts">
+        <a href="{{ url_for('contacts') }}">CONTACTS</a>
+      </li>
+    </ul>
 
-  <input name="c4l-rating" type="radio" id="c4l-rate3" value="3" />
-  <label for="c4l-rate3"></label>
+  </div>
+</header>
 
-  <input name="c4l-rating" type="radio" id="c4l-rate4" value="4" />
-  <label for="c4l-rate4"></label>
+<div class="menu_blackadam">
+  <div class = "container_img_black">
+    <img id="poster_blackadam" src="/static/Images/Harry_poster.jpg">
+  </div>
 
-  <input name="c4l-rating" type="radio" id="c4l-rate5" value="5" checked />
-  <label for="c4l-rate5"></label>
+  <div class= "titolo_blackadam">
+    <h1 id="titolo">HARRY POTTER E LA CAMERA DEI SEGRETI 20° ANNIVERSARIO</h1>
+  </div>
+
+  <div class="cast_blackadam">
+    <h1 id = "titolo_cast">Cast: </h1>
+    <p id = "Dwayne">Daniel Radcliffe: Harry Potter <br>
+      Rupert Grint: Ron Weasley<br>
+      Emma Watson: Hermione Granger<br>
+      Richard Harris: Albus Silente<br>
+       Tom Felton: Draco Malfoy<br>
+      Toby Jones: Dobby<br>
+      Alan Rickman: Severus Piton<br>
+        Jason Isaacs: Lucius Malfoy<br>
+    </p>
+  </div>
+
+  <div class="regia_blackadam">
+    <h1 id ="regia">Regia: </h1>
+    <p id = "regista">Chris Columbus</p>
+    <h1 id ="regia2">Data uscita: </h1>
+    <p id = "regista2">Dal 16 al 22 novembre al cinema</p>
+  </div>
+
+  <div class="tra_blackadam">
+    <h1 id ="trama">Trama: </h1>
+    <p id ="testo_trama">
+    Harry Potter e la Camera dei Segreti torna al cinema per il 20° Anniversario dall'uscita nelle sale.
+        Diretto da Chris Columbus, e' tratto dall'omonimo romanzo scritto da J. K. Rowling ed è il secondo capitolo della saga dedicata al mago
+        più famoso del mondo.Dopo aver trascorso un anno fantastico nella scuola di magia e stregoneria di Hogwarts, Harry (Daniel Radcliffe) e' costretto
+        a passare l'estate presso la casa degli zii Dursley.
+        Ma una sera Harry riceve un'insolita visita da un elfo domestico di nome Dobby, che cerca a ogni costo di convincere Harry a non tornare a Hogwarts,
+      <span class="read-more-text">
+       Ma Ron Weasley (Rupert Grint), migliore amico
+        di Harry, va in suo aiuto insieme ai due fratelli gemelli Fred e George (James e Oliver Phelps), che lo fanno scappare con l'auto volante del padre.
+        Quando finalmente Harry e Ron sono alla stazione pronti per prendere l'Espresso per Hogwarts, la barriera magica che li separa dal binario 9 ¾ è stranamente bloccata.
+        I due amici, preoccupati all'idea di non poter raggiungere la scuola, utilizzano l'auto volante dei Weasley.
+        Ma appena arrivano al castello, cominciano a succedere cose molto strane: Harry sente continuamente delle voci inquietanti fino a quando una sera
+        viene ritrovata la gatta del custode Gazza pietrificata, accanto a una scritta sul muro tracciata con il sangue, che annuncia che la
+        Camera dei Segreti e' stata riaperta e che il suo erede e' pronto a mietere vittime. Harry, Ron e Hermione (Emma Watson) faranno scoperte agghiaccianti
+        su chi si cela nell'oscura camera e saranno pronti ancora una volta ad affrontare ogni pericolo.
+      </span>
+      <span class="read-more-btn">Read More...</span>
+  </div>
+
+  <div class="reviewtext">
+    <h3 id="textreview">LEAVE A REVIEW</h3>
+  </div>
+
+  <div class="rating">
+    <div class="c4l-rating">
+      <input name="c4l-rating" type="radio" id="c4l-rate1" value="1" />
+      <label for="c4l-rate1"></label>
+
+      <input name="c4l-rating" type="radio" id="c4l-rate2" value="2" />
+      <label for="c4l-rate2"></label>
+
+      <input name="c4l-rating" type="radio" id="c4l-rate3" value="3" />
+      <label for="c4l-rate3"></label>
+
+      <input name="c4l-rating" type="radio" id="c4l-rate4" value="4" />
+      <label for="c4l-rate4"></label>
+
+      <input name="c4l-rating" type="radio" id="c4l-rate5" value="5" checked />
+      <label for="c4l-rate5"></label>
+  </div>
+  </div>
+
 </div>
+<script src="/static/js/Readmore.js"></script>
 </body>
 </html>

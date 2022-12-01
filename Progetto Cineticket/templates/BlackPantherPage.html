@@ -1,28 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="/static/stylesheet/BlackPanther.css/">
+<!-- -->
+<!doctype html>
+<html>
+
+<head> <!-- CONTENIER DEI DATI, CI VANNO (LINK, TITLE, SCRIPT,META) -->
+  <link rel="icon" type="image/png" href="/static/Images/logo_piccolo.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+  <title>Cineticket Cinema | Film | Eventi | Orari </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/stylesheet/BlackAdam.css">
+  <link rel="stylesheet" href="/static/stylesheet/Index.css">
   <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
-  <title>BlackPanther</title>
 
 </head>
-<body id="body_blackpanther">
-<div class="c4l-rating">
-  <input name="c4l-rating" type="radio" id="c4l-rate1" value="1" />
-  <label for="c4l-rate1"></label>
 
-  <input name="c4l-rating" type="radio" id="c4l-rate2" value="2" />
-  <label for="c4l-rate2"></label>
+<body id="body_blackadam">
+<header id="header_blackadam">
+  <div class="Drop-menu_blackadam">
+    <ul id="Menu">
+      <a href="{{ url_for('home') }}"><img id ="fotologo" src="/static/Images/logo_cineticket.png"></a>
+      <li class="Promo">
+        <a href="{{ url_for('promotion') }}">PROMOTION</a>
+      </li>
+      <li class="contacts">
+        <a href="{{ url_for('contacts') }}">CONTACTS</a>
+      </li>
+    </ul>
 
-  <input name="c4l-rating" type="radio" id="c4l-rate3" value="3" />
-  <label for="c4l-rate3"></label>
+  </div>
+</header>
 
-  <input name="c4l-rating" type="radio" id="c4l-rate4" value="4" />
-  <label for="c4l-rate4"></label>
+<div class="menu_blackadam">
+  <div class = "container_img_black">
+    <img id="poster_blackadam" src="/static/Images/posterblackpanther.jpeg">
+  </div>
 
-  <input name="c4l-rating" type="radio" id="c4l-rate5" value="5" checked />
-  <label for="c4l-rate5"></label>
+  <div class= "titolo_blackadam">
+    <h1 id="titolo">BLACK PANTHER WAKANDA FOREVER</h1>
+  </div>
+
+  <div class="cast_blackadam">
+    <h1 id = "titolo_cast">Cast: </h1>
+    <p id = "Dwayne">Letitia Wright: Black Panther <br>
+      Winston Duke: M'Baku<br>
+      Lupita Nyong'o: Nakia<br>
+      Danai Gurira: Okoye<br>
+        Martin Freeman: Everett Ross<br>
+      Dominique Thorne: Riri Williams<br>
+      Angela Bassett: Ramonda<br>
+    </p>
+  </div>
+
+  <div class="regia_blackadam">
+    <h1 id ="regia">Regia: </h1>
+    <p id = "regista">Ryan Coogler</p>
+    <h1 id ="regia2">Data uscita: </h1>
+    <p id = "regista2">09/10/2022</p>
+  </div>
+
+  <div class="tra_blackadam">
+    <h1 id ="trama">Trama: </h1>
+    <p id ="testo_trama">
+      Black Panther: Wakanda Forever, il film Marvel diretto da Ryan Coogler, non vedra' il ritorno del compianto Chadwick Boseman nei panni di T'Challa / Black Panther.
+        Dopo la morte di T'Challa, il regno di Wakanda piange la perdita del suo amato re. Con la dipartita di Black Panther, pero',
+        la nazione finisce nel mirino delle potenze mondiali, pronte a invaderla e impossessarsene, ma la vera minaccia non arriverà dalla terra,
+        bensi' dal mare.
+      <span class="read-more-text">
+        Namor (Tenoch Huerta), il re di Talokan, e' pronto a iniziare una guerra contro Wakanda per vedere esteso il suo dominio anche in superficie.
+        Sara' compito di degli eroi di Wakanda, riuniti grazie a War Dog Nakia (Lupita Nyong'o) ed Everett Ross (Martin Freeman),
+        lottare per riportare la pace e la tranquillita' nel regno e forgiare insieme alla regina Ramonda (Angela Bassett),
+        Shuri (Letitia Wright), M'Baku (Winston Duke), Okoye (Danai Gurira) e le Dora Milaje, quello che sara' un nuovo cammino per il loro regno.
+      </span>
+      <span class="read-more-btn">Read More...</span>
+  </div>
+
+  <div class="reviewtext">
+    <h3 id="textreview">LEAVE A REVIEW</h3>
+  </div>
+
+  <div class="rating">
+    <div class="c4l-rating">
+      <input name="c4l-rating" type="radio" id="c4l-rate1" value="1" />
+      <label for="c4l-rate1"></label>
+
+      <input name="c4l-rating" type="radio" id="c4l-rate2" value="2" />
+      <label for="c4l-rate2"></label>
+
+      <input name="c4l-rating" type="radio" id="c4l-rate3" value="3" />
+      <label for="c4l-rate3"></label>
+
+      <input name="c4l-rating" type="radio" id="c4l-rate4" value="4" />
+      <label for="c4l-rate4"></label>
+
+      <input name="c4l-rating" type="radio" id="c4l-rate5" value="5" checked />
+      <label for="c4l-rate5"></label>
+  </div>
+  </div>
+
 </div>
+<script src="/static/js/Readmore.js"></script>
 </body>
 </html>
