@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap');
+#body_b{
+  margin: 0;
+  color: #222222;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  overflow-x: hidden;
+  font-family: Tahoma, serif;
+  background-image: -ms-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: -moz-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: -o-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #09203f), color-stop(1, #537895));
+  background-image: -webkit-linear-gradient(top right, #09203f 0%, #537895 100%);
+  background-image: linear-gradient(to top right, #09203f 0%, #537895 100%);
+}
+#body_b, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+
+}
+iframe {
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+}
+#body_b {
+   background: #30404D;
+}
+
+
+.Drop-menu_b {
+  margin: 0;
+  padding: 0;
+  border-color: #0e090e;
+  border-style: solid;
+  background-color: black;
+  width: 100%;
+  display: block;
+}
+
+ul#Menu ul {
+  margin: 2px 0 0;
+  padding: 0;
+  position: relative;
+  bottom: 73.40%;
+  right: 21.96%;
+  display: inline-block;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+   background-color:#444 ;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+
+ul#Menu li:hover ul {
+  opacity: 1;
+  visibility: visible;
+   background-color: black;
+}
+
+
+ul#Menu ul li {
+  float: none;
+  display: block;
+  border: 0;
+}
+
+
+ul#Menu ul a {
+  color: white;
+  padding: 10px;
+  width: 130px;
+  display: block;
+  white-space: nowrap;
+  float: none;
+  text-transform: none;
+}
+
+
+ul#Menu ul a:hover {
+  background-color: orange;
+  color: black;
+}
+
+
+header li {
+  display: inline;
+  margin: 5px;
+  color: white;
+}
+
+
+header ul {
+  text-align: center;
+}
+
+
+header ul li.Logo {
+  border: 3px solid orange;
+}
+
+
+header ul li.Logo a {
+  color: white;
+  text-decoration: none;
+}
+.logo {
+  position: relative;
+  margin-top: 100px;
+  width: 50px;
+  height: 50px;
+}
+
+
+#fotologo {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: -1.00%;
+  width: 5%;
+  height: 5%;
+}
+
+.menub{
+  margin-top: 2%;
+  width: 100%;
+  height: 30%;
+
+
+
+}
+.container_img_black{
+  width: 20%;
+  height: 100.08%;
+  border-color:#f8a612 ;
+  position: relative;
+  bottom: 1%;
+  margin-left: 3%;
+
+}
+
+
+#poster{
+  width: 70%;
+  height: 100%;
+}
+
+.titolone{
+
+  border-color: #09203f;
+  width: 100%;
+  height: 20%;
+  position: relative;
+  bottom: 107%;
+  left: 20%;
+  background-color:#f8a612;
+}
+#titolo{
+  font-family: "Audiowide", sans-serif;
+  position: relative;
+  top: 20%;
+}
+
+.cast{
+  width: 20%;
+  height: 80.08%;
+  position: relative;
+  bottom: 112%;
+  left: 20%;
+}
+
+
+#titolo_cast{
+  font-family: "Audiowide", sans-serif;
+  color: white;
+}
+
+
+#positionn{
+  color: #8e8e8e;
+  position: relative;
+  bottom: 5%;
+}
+
+
+.regiaone{
+  width: 20%;
+  height: 80.08%;
+  position: relative;
+  bottom: 192%;
+  left: 40%;
+
+
+
+}
+#regia{
+  font-family: "Audiowide", sans-serif;
+  color: white;
+  position: relative;
+  bottom: 7%;
+
+}
+#regista{
+  color: #8e8e8e;
+  position: relative;
+  bottom: 10%;
+
+}
+
+#regia2{
+  font-family: "Audiowide", sans-serif;
+  color: white;
+  position: relative;
+  bottom: 3%;
+
+}
+#regista2{
+  color: #8e8e8e;
+  position: relative;
+  bottom: 6%;
+
+}
+
+.tra{
+
+  width: 40%;
+  position: relative;
+  bottom: 285%;
+  left: 60%;
+  height: 50%;
+
+}
+#trama{
+  font-family: "Audiowide", sans-serif;
+  color: white;
+  position: relative;
+  bottom: -2%;
+}
+#testo_trama{
+  color: #8e8e8e;
+  position: relative;
+  bottom: 12.8%;
+  padding: 1%;
+}
+.read-more-btn{
+  font-family: "lato", sans-serif;
+  color: #f8a612;
+}
+
+.read-more-text{
+  display: none;
+}
+.read-more-text--show{
+  display: inline;
+}
+
+.reviewtext{
+  margin-top: -33%;
+  margin-left: 45%;
+}
+
+#textreview{
+  color: white;
+  font-family: Audiowide, sans-serif;
+}
+
+.rating{
+  margin-top: 2%;
+  margin-left: 45%;
+}
+.c4l-rating input[name="c4l-rating"] {
+  display: none;
+}
+.c4l-rating input[name="c4l-rating"] + label:after {
+  content: none;
+}
+.c4l-rating input[name="c4l-rating"] + label {
+  font-family: FontAwesome, serif;
+}
+.c4l-rating input[name="c4l-rating"] + label:before {
+    background-color: transparent;
+    border: none;
+    color: #ffc107;
+    content: '\f005';
+    font-size: 1.33333333em;
+    transition: none;
+}
+.c4l-rating input[name="c4l-rating"]:checked ~ label:before {
+    background-color: transparent;
+    border: none;
+    color: #607d8b;
+}
+
+.c4l-rating input[name="c4l-rating"]:checked + label:before {
+  color: #ffc107;
+}
+
+.c4l-rating input[name="c4l-rating"] + label:hover ~ input + label:before {
+  opacity: 0.6;
+}
+
+
