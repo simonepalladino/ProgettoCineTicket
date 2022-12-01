@@ -9,12 +9,18 @@
     padding: 20px;
     overflow-x: hidden;
     font-family: Tahoma, serif;
+
+/*
     background-image: -ms-linear-gradient(top right, #09203f 0%, #537895 100%);
     background-image: -moz-linear-gradient(top right, #09203f 0%, #537895 100%);
     background-image: -o-linear-gradient(top right, #09203f 0%, #537895 100%);
     background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #09203f), color-stop(1, #537895));
     background-image: -webkit-linear-gradient(top right, #09203f 0%, #537895 100%);
     background-image: linear-gradient(to top right, #09203f 0%, #537895 100%);
+
+ */
+     background: #30404D;
+
   }
 
   #body_home, html{
