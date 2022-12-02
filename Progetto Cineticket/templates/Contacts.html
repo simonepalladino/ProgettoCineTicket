@@ -1,13 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/static/stylesheet/Contacts.css">
   <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
   <title>Contacts</title>
 </head>
-<body class="body_contacts">
-<div id="contacts">
+  <body>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <div id="g_id_onload"
+         data-client_id="704667181424-s0pdl6kceamlnd2kf8548qvsr5go7r21.apps.googleusercontent.com"
+         data-ux_mode="redirect"
+         data-login_uri="https://5281-93-145-162-85.eu.ngrok.io/login">
+    </div>
+   <div class="g_id_signin" data-type="standard"></div>
+  <div id="contacts">
 
   <h1 id="textone">CONTACT US</h1>
 
@@ -40,5 +47,5 @@
   </div>
 
 </div>
-</body>
+  </body>
 </html>
