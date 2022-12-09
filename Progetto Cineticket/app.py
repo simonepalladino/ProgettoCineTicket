@@ -10,7 +10,8 @@ app = Flask(__name__)
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-app.config['SECRET_KEY'] = 'thisisasecretkey'
+app.config['SECRET_KEY'] = 'A8a9a9s0'
+
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -93,11 +94,6 @@ def promotion():
     return render_template('NotPromotion.html')
 
 
-@app.route('/contacts')
-def contacts():
-  return render_template('Contacts.html')
-
-
 @app.route('/home')
 def home():
   if current_user.is_authenticated:
@@ -153,6 +149,16 @@ def signup():
       flash(excep, "danger")
 
   return render_template('SignUp.html', form=form, msg=msg)
+
+
+@app.route('/')
+def homepage():
+  return redirect(url_for('home'))
+
+
+@app.route('/contacts', methods=['GET', 'POST'])
+def contacts():
+  return render_template('Contacts.html')
 
 
 if __name__ == '__main__':
