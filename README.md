@@ -19,6 +19,20 @@ Now write in the terminal:
 pip3 install -r requirements.txt
 ```
 
+## GOOGLE LOGIN CONFIGURATION:
+
+```
+GOOGLE_CLIENT_ID = "your google client id"
+client_secret_file = os.path.join(pathlib.Path(__file__).parent, "client_secret.json")
+
+flow = Flow.from_client_secrets_file(
+  client_secrets_file=client_secret_file,
+  scopes=["https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email", "openid"],
+  redirect_uri="http://localhost:8000/callback"
+)
+```
+
+
 ## DATABASE CONFIGURATION WITH SQLITE AND SQL_ALCHEMY:
 
 After writing the classes (even the user class) of the database on python we can proceed with the configuration of the database and the creation inside the folder path of our project.
