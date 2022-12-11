@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, flash
+from flask import Flask, render_template, url_for, redirect, flash, session, abort, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
@@ -6,11 +6,78 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError, Regexp, EqualTo
 from flask_bcrypt import Bcrypt
 
+import os
+import pathlib
+import requests
+from google.oauth2 import id_token
+from google_auth_oauthlib.flow import Flow
+from pip._vendor import cachecontrol
+import google.auth.transport.requests
+
+
 app = Flask(__name__)
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SECRET_KEY'] = 'A8a9a9s0'
+
+os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
+
+GOOGLE_CLIENT_ID = "352938198983-bvvbamujntvrfn4iqilae9fadrqdino0.apps.googleusercontent.com"
+client_secret_file = os.path.join(pathlib.Path(__file__).parent, "client_secret.json")
+
+flow = Flow.from_client_secrets_file(
+  client_secrets_file=client_secret_file,
+  scopes=["https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email", "openid"],
+  redirect_uri="http://localhost:8000/callback"
+)
+
+
+"""def login_is_required(function):
+  def wrapper(*args, **kwargs):
+    if "google_id" not in session:
+      return abort(401)
+    else:
+      return function()
+
+  return wrapper"""
+
+
+@app.route("/login_google")
+def login_google():
+  authorization_url, state = flow.authorization_url()
+  session["state"] = state
+  return redirect(authorization_url)
+
+
+@app.route("/callback")
+def callback():
+  flow.fetch_token(authorization_response=request.url)
+
+  if not session["state"] == request.args["state"]:
+    abort(500)  # State does not match!
+
+  credentials = flow.credentials
+  request_session = requests.session()
+  cached_session = cachecontrol.CacheControl(request_session)
+  token_request = google.auth.transport.requests.Request(session=cached_session)
+
+  id_info = id_token.verify_oauth2_token(
+    id_token=credentials._id_token,
+    request=token_request,
+    audience=GOOGLE_CLIENT_ID
+  )
+
+  session["google_id"] = id_info.get("sub")
+  session["username"] = id_info.get("name")
+  session['photo'] = id_info.get("picture")
+  return redirect("/index_google")
+
+
+@app.route("/logout_google")
+def logout_google():
+  session.clear()
+  return redirect("/")
 
 
 login_manager = LoginManager()
@@ -102,6 +169,11 @@ def home():
     return render_template('Indexanonymous.html')
 
 
+@app.route('/index_google')
+def index_google():
+    return render_template('IndexGoogle.html')
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
   form = LoginForm()
@@ -156,9 +228,14 @@ def homepage():
   return redirect(url_for('home'))
 
 
-@app.route('/contacts', methods=['GET', 'POST'])
+@app.route('/contacts')
 def contacts():
   return render_template('Contacts.html')
+
+
+@app.route('/promotion_google')
+def promotion_google():
+  return render_template('Promotion.html')
 
 
 if __name__ == '__main__':
