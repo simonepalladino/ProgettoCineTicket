@@ -196,10 +196,13 @@
 
   #google_username{
     color: white;
-
 }
 
   #heart{
+    color: red;
+  }
+
+  #heartwo{
     color: red;
   }
 
