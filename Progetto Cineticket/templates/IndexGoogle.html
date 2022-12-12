@@ -18,19 +18,27 @@
 <header>
   <div class="Drop-menu">
     <ul id="Menu">
-      <a href="{{ url_for('home') }}"><img id ="fotologo" src="/static/Images/logo_cineticket.png"></a>
+      <a href="{{ url_for('index_google') }}"><img id ="fotologo" src="/static/Images/logo_cineticket.png"></a>
       <li class="Promo">
            <a href="{{ url_for('promotion_google') }}">PROMOTION</a>
       </li>
       <li class="contacts">
         <a href="{{ url_for('contacts') }}">CONTACTS</a>
       </li>
+      {% block content %}
+      {% if session['username'] authenticated %}
       <li class="Logo">
          <a href= "{{ url_for('logout_google') }}">LOGOUT</a>
           </a>
       </li>
       <img class="avatar d-inline-block align-text-top" src="{{session['photo']}}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
       <h5 id="google_username"> {{session['username']}} </h5>
+      {% endif block %}
+      {% endblock content %}
+      <li class="Logo">
+         <a href= "{{ url_for('login') }}">LOGIN</a>
+          </a>
+      </li>
     </ul>
   </div>
 </header>
