@@ -1,3 +1,5 @@
+import sqlite3
+
 from flask import Flask, render_template, url_for, redirect, flash, session, abort, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
@@ -33,14 +35,10 @@ flow = Flow.from_client_secrets_file(
 )
 
 
-"""def login_is_required(function):
-  def wrapper(*args, **kwargs):
-    if "google_id" not in session:
-      return abort(401)
-    else:
-      return function()
-
-  return wrapper"""
+def connection_db():
+  connection = sqlite3.connect('database.db')
+  connection.row_factory = sqlite3.Row
+  return connection
 
 
 @app.route("/login_google")
@@ -67,11 +65,17 @@ def callback():
     request=token_request,
     audience=GOOGLE_CLIENT_ID
   )
-
   session["google_id"] = id_info.get("sub")
   session["username"] = id_info.get("name")
+  session['name'] = id_info.get('given_name')
+  session['last_name'] = id_info.get('family_name')
+  session['email'] = id_info.get("email")
   session['photo'] = id_info.get("picture")
-  return redirect("/index_google")
+  connection = connection_db()
+  connection.execute('INSERT INTO User (username, name, surname, email) VALUES (?,?,?,?)', (session['username'], session['name'], session['last_name'], session['email']))
+  connection.commit()
+  connection.close()
+  return redirect("/")
 
 
 @app.route("/logout_google")
@@ -92,15 +96,15 @@ def load_user(user_id):
 
 class User(db.Model, UserMixin):
   id = db.Column(db.Integer, primary_key=True)
-  username = db.Column(db.String(50), nullable=False, unique=True)
+  username = db.Column(db.String(50), nullable=False)
   name = db.Column(db.String(50), nullable=False)
   surname = db.Column(db.String(50), nullable=False)
   cellular = db.Column(db.String(50), nullable=True, unique=True)
   address = db.Column(db.String(50), nullable=True)
   city = db.Column(db.String(50), nullable=True)
   state = db.Column(db.String(50), nullable=True)
-  email = db.Column(db.String(50), nullable=False, unique=True)
-  password = db.Column(db.String(50), nullable=False)
+  email = db.Column(db.String(50), nullable=True)
+  password = db.Column(db.String(50))
 
 
 class SignupForm(FlaskForm):
@@ -125,6 +129,11 @@ class SignupForm(FlaskForm):
     existing_username = User.query.filter_by(username=username.data).first()
     if existing_username:
       raise ValidationError('That username already exists. Please choose a different one.')
+
+  def validate_cellular(self, cellular):
+    existing_cellular = User.query.filter_by(cellular=cellular.data).first()
+    if existing_cellular:
+      raise ValidationError('That phone number already exists. Please choose a different one.')
 
 
 class LoginForm(FlaskForm):
@@ -155,23 +164,12 @@ def harrypotter():
 
 @app.route('/promotion')
 def promotion():
-  if current_user.is_authenticated:
     return render_template('Promotion.html')
-  else:
-    return render_template('NotPromotion.html')
 
 
 @app.route('/home')
 def home():
-  if current_user.is_authenticated:
     return render_template('Index.html')
-  else:
-    return render_template('Indexanonymous.html')
-
-
-@app.route('/index_google')
-def index_google():
-    return render_template('IndexGoogle.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -231,11 +229,6 @@ def homepage():
 @app.route('/contacts')
 def contacts():
   return render_template('Contacts.html')
-
-
-@app.route('/promotion_google')
-def promotion_google():
-  return render_template('Promotion.html')
 
 
 if __name__ == '__main__':
