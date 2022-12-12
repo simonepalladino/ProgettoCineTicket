@@ -18,7 +18,6 @@
 <header>
 
   <div class="Drop-menu">
-    {% if current_user.is_authenticated %}
     <ul id="Menu">
       <a href="{{ url_for('home') }}"><img id ="fotologo" src="/static/Images/logo_cineticket.png"></a>
       <li class="Promo">
@@ -27,13 +26,30 @@
       <li class="contacts">
         <a href="{{ url_for('contacts') }}">CONTACTS</a>
       </li>
+
+      {% if current_user.is_authenticated %}
       <li class="Logo">
         <a href= "{{ url_for('logout') }}">LOG OUT</a>
       </li>
 
       <h5 id="welcome">Salve {{ current_user.username }}<span id="heart"> &hearts;</span></h5>
+
+       {% elif session['username'] %}
+      <li class="Logo">
+        <a href= "{{ url_for('logout_google') }}">LOG OUT</a>
+        </a>
+      </li>
+        <h5 id="google_username"> Salve {{session['username']}} <span id="heartwo"> &hearts;</span></h5>
+      {% else %}
+
+      <li class="Logo">
+         <a href= "{{ url_for('login') }}">LOGIN</a>
+          </a>
+      </li>
+
+      {% endif%}
+
     </ul>
-    {% endif %}
   </div>
 
 </header>

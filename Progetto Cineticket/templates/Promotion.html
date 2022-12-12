@@ -1,26 +1,62 @@
 <!doctype html>
 <html>
 <head>
-     <link rel="icon" type="image/png" href="/static/Images/logo_piccolo.png"/>
-    <title>Cineticket Cinema | Film | Eventi | Orari </title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="/static/stylesheet/Promotion.css">
+  <link rel="icon" type="image/png" href="/static/Images/logo_piccolo.png"/>
+  <title>Cineticket Cinema | Film | Eventi | Orari </title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/static/stylesheet/Promotion.css">
   <script src="/static/js/randomfunction.js"></script>
 </head>
 <body id="promotion">
-
+{% if current_user.is_authenticated %}
   <div class="form-box">
-      <div id="sconto"> <h1> -20% ONLY FOR YOU ! </h1>
-      </div>
-      <h3>To get your promotional code click on <br> <a>GET PROMOTION</a> </h3>
+    <div id="sconto"> <h1> -20% ONLY FOR YOU ! </h1>
+    </div>
+    <h3>To get your promotional code click on <br> <a>GET PROMOTION</a> </h3>
     <div class="random">
-    <form name="rdform">
+      <form name="rdform">
         <input type="button" value="Get Promotion" onClick="demo();">&nbsp;
         <input id="text" type="text" name="random" placeholder="It will be generate your code promotion">
-    </form>
+      </form>
     </div>
     <br>
+  </div>
+{% elif session['username'] %}
+<div class="form-box">
+    <div id="scontotwo"> <h1> -20% ONLY FOR YOU ! </h1>
+    </div>
+    <h3>To get your promotional code click on <br> <a>GET PROMOTION</a> </h3>
+    <div class="random">
+      <form name="rdform">
+        <input type="button" value="Get Promotion" onClick="demo();">&nbsp;
+        <input id="textwo" type="text" name="random" placeholder="It will be generate your code promotion">
+      </form>
+    </div>
+    <br>
+  </div>
+{% else %}
+<div class="block">
+<h1 id="message">You can't have promotions because you need an account</h1>
 
- </div>
+  <div class="form-footer">
+      <div>
+        <span>Don't have an account?</span> <a href="{{ url_for('signup') }}"><button id="btn001">SIGN UP</button></a> <i class="fa-sharp fa-solid fa-user-plus"></i>
+      </div>
+    </div><!-- FORM FOOTER -->
+
+  <div class="form-footer">
+      <div>
+        <span>Log in to your account if you already have one</span> <a href="{{ url_for('login') }}"><button id="btn002">LOGIN</button></a> <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+      </div>
+    </div><!-- FORM FOOTER -->
+
+  <div class="form-footer">
+      <div>
+        <a href="{{ url_for('home') }}"><button id="btn003"><i id="houseicon" class="fa-sharp fa-solid fa-house"></i></button></a>
+      </div>
+  </div><!-- FORM FOOTER -->
+</div>
+{% endif %}
 </body>
 </html>
