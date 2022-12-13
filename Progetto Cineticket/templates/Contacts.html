@@ -1,32 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="/static/stylesheet/Contacts.css">
-  <link rel="stylesheet" href="/static/stylesheet/Promotion.css">
-  <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
-  <title>Contacts</title>
-</head>
-<body class="body_contacts" >
 
-<div class="container">
-  <form id="contact" action="" method="post">
-    <h3>Contact us</h3>
-    <h4>Contact us today, and get reply with in 24 hours!</h4>
-    <fieldset>
-      <input name="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
-    </fieldset>
-    <fieldset>
-      <input name="email" placeholder="Your Email Address" type="email" tabindex="2" required>
-    </fieldset>
-    <fieldset>
-      <textarea name="message" placeholder="Type your Message Here...." tabindex="5" required></textarea>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-    </fieldset>
-  </form>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+
+    <link rel="stylesheet" href="/static/stylesheet/Contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id = "body_contacts">
+<div>
+
+  <h1>HAI BISOGNO DI ASSISTENZA?</h1>
+  <h2>CONTATTACI!</h2>
+  <div>
+    <h3>Puoi scrivere alle seguenti email ufficiali:</h3>
+    <p>mattia.dipalma01@studenti.uniparthenope.it</p>
+    <p>email vincenzo</p>
+    <p>email simone</p>
+  </div>
+  <h2>PUOI UTILIZZARE LA NOSTRA CHATBOX UTILIZZANDO UTILI KEYWORD</h2>
+  <p>@assistenza</p>
+  <p>@problemilogin</p>
+  <p>@promozione</p>
+
+</div>
+<!-- CHAT BAR BLOCK -->
+<div class="chat-bar-collapsible">
+  <button id="chat-button" type="button" class="collapsible">Chat with us!
+    <i id="chat-icon_one" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+  </button>
+  <div class="content">
+    <div class="full-chat-block">
+      <!-- Message Container -->
+      <div class="outer-container">
+        <div class="chat-container">
+          <!-- Messages -->
+          <div id="chatbox">
+            <h5 id="chat-timestamp"></h5>
+            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+          </div>
+          <!-- User input box -->
+          <div class="chat-bar-input-block">
+            <div id="userInput">
+              <input id="textInput" class="input-box" type="text" name="msg" placeholder="Tap 'Enter' to send a message">
+              <p></p>
+            </div>
+            <div class="chat-bar-icons">
+              <i id="chat-icon_two" style="color: crimson;" class="fa fa-fw fa-heart"
+                 onclick="heartButton()"></i>
+              <i id="chat-icon_three" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+            </div>
+          </div>
+          <div id="chat-bar-bottom">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="form-footer">
@@ -35,6 +70,8 @@
   </div>
 </div><!-- FORM FOOTER -->
 
-
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/static/js/responses.js"></script>
+<script src="/static/js/chat.js"></script>
 </html>
