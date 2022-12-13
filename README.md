@@ -19,43 +19,48 @@ Now write in the terminal:
 pip3 install -r requirements.txt
 ```
 
-## GOOGLE LOGIN CONFIGURATION:
+## GOOGLE CLOUD PLATFORM CONFIGURATION:
 
-```
-GOOGLE_CLIENT_ID = "your google client id"
-client_secret_file = os.path.join(pathlib.Path(__file__).parent, "client_secret.json")
-
-flow = Flow.from_client_secrets_file(
-  client_secrets_file=client_secret_file,
-  scopes=["https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email", "openid"],
-  redirect_uri="http://localhost:8000/callback"
-)
-```
+1. create a google cloud platform account or login with your google account on console.cloud.google.com
+2. Go to dashboard and create a new project
+3. open the project
+4. Go to API & Services ---> Credentials
+5. Configure consent screen
+Settings consent screen:
+-User Type: External
+-Set the name and the other information
+6. Create credentials ---> Oauth client ID
+7. Set the name and the other information of the app and choose Web application as Application type
+8. Download client_secret.json file
 
 
 ## DATABASE CONFIGURATION WITH SQLITE AND SQL_ALCHEMY:
 
 After writing the classes (even the user class) of the database on python we can proceed with the configuration of the database and the creation inside the folder path of our project.
 
-- select the project folder path via the ```cd``` command
-- write in the terminal ```python3``` to use python
-- write in the terminal ```from app import db```
-- write in the terminal ```db.create_all()```
-- write in the terminal ```exit()```
+1. select the project folder path via the ```cd``` command
+2. write in the terminal ```python3``` to use python
+3. write in the terminal ```from app import db```
+4. write in the terminal ```db.create_all()```
+5. write in the terminal ```exit()```
 
 
 ## SQL LITE MENU VIA TERMINAL:
 
-- select the project folder path via the ```cd``` command
-- write in the terminal ```sqlite3 database.db``` and press enter
-- write in the terminal ```.tables``` to view all the tables of the database
-- write in the terminal ```.exit()``` to leave
+1. select the project folder path via the ```cd``` command
+2. write in the terminal ```sqlite3 database.db``` and press enter
+3. write in the terminal ```.tables``` to view all the tables of the database
+4. write in the terminal ```.exit()``` to leave
 
 
 ## START SERVER:
 
-- select the project folder path via the ```cd``` command
-- ```python3 app.py``` ----> ON MAC OR ```python app.py``` ----> ON WINDOWS
+1. select the project folder path via the ```cd``` command
+2. write in the terminal:
+ON MAC
+```python3 app.py```
+ON WINDOWS
+```python app.py```
 
 the server will start from port 8000 previously chosen via python
 
