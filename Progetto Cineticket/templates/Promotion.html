@@ -21,6 +21,11 @@
       </form>
     </div>
     <br>
+    <div class="form-footer">
+  <div>
+    <a href="{{ url_for('home') }}"><button id="btn005">GO TO HOME <i id="houseicon1" class="fa-sharp fa-solid fa-house"></i></button></a>
+  </div>
+</div><!-- FORM FOOTER -->
   </div>
 {% elif session['username'] %}
 <div class="form-box">
@@ -34,6 +39,11 @@
       </form>
     </div>
     <br>
+  <div class="form-footer">
+  <div>
+    <a href="{{ url_for('home') }}"><button id="btn006">GO TO HOME <i id="houseicon2" class="fa-sharp fa-solid fa-house"></i></button></a>
+  </div>
+</div><!-- FORM FOOTER -->
   </div>
 {% else %}
 <div class="block">
