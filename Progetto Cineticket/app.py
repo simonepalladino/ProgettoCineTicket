@@ -72,10 +72,15 @@ def callback():
   session['email'] = id_info.get("email")
   session['photo'] = id_info.get("picture")
   connection = connection_db()
-  connection.execute('INSERT INTO User (username, name, surname, email) VALUES (?,?,?,?)', (session['username'], session['name'], session['last_name'], session['email']))
-  connection.commit()
-  connection.close()
-  return redirect("/")
+  cur_sql = connection.cursor()
+  res = cur_sql.execute('SELECT email FROM User where email=?', [session['email']], )
+  if res.fetchone():
+    return redirect("/")
+  else:
+    connection.execute('INSERT INTO User (username, name, surname, email) VALUES (?,?,?,?)', (session['username'], session['name'], session['last_name'], session['email']))
+    connection.commit()
+    connection.close()
+    return redirect("/")
 
 
 @app.route("/logout_google")
