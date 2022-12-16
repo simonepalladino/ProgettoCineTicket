@@ -73,8 +73,8 @@ def callback():
   session['photo'] = id_info.get("picture")
   connection = connection_db()
   cur_sql = connection.cursor()
-  res = cur_sql.execute('SELECT email FROM User where email=?', [session['email']], )
-  if res.fetchone():
+  exist = cur_sql.execute('SELECT email FROM User where email=?', [session['email']], )
+  if exist.fetchone():
     return redirect("/")
   else:
     connection.execute('INSERT INTO User (username, name, surname, email) VALUES (?,?,?,?)', (session['username'], session['name'], session['last_name'], session['email']))
