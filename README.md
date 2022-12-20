@@ -1,4 +1,4 @@
-# CineTicket is a website that deals with cinema, allows users to register and log in. Users who have an account have the option to receive a promotion to redeem once they arrive at the cinema.
+### CineTicket is a website that deals with cinema, allows users to register and log in. Users who have an account have the option to receive a promotion to redeem once they arrive at the cinema.
 
 ## COMPONENTS USED:
 
