@@ -28,6 +28,9 @@
       </li>
 
       {% if current_user.is_authenticated %}
+      <li class="Info">
+        <a href="{{ url_for('info_account')}}">MY ACCOUNT</a>
+      </li>
       <li class="Logo">
         <a href= "{{ url_for('logout') }}">LOG OUT</a>
       </li>
@@ -35,9 +38,11 @@
       <h5 id="welcome">Salve {{ current_user.username }}<span id="heart"> &hearts;</span></h5>
 
        {% elif session['username'] %}
+      <li class="Info">
+        <a href="{{ url_for('info_account') }}">MY ACCOUNT</a>
+      </li>
       <li class="Logo">
         <a href= "{{ url_for('logout_google') }}">LOG OUT</a>
-        </a>
       </li>
         <h5 id="google_username"> Salve {{session['username']}} <span id="heartwo"> &hearts;</span></h5>
       {% else %}
