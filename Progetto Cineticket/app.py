@@ -236,5 +236,10 @@ def contacts():
   return render_template('Contacts.html')
 
 
+@app.route('/info_account')
+def info_account():
+  return render_template('InfoAccount.html')
+
+
 if __name__ == '__main__':
   app.run(debug=True, host="localhost", port=8000)
