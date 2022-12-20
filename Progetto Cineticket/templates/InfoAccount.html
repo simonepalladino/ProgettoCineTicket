@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/stylesheet/Account.css">
+    <title>Account Profile</title>
+</head>
+<body id="body_account">
+<div>
+   <a href="{{url_for('homepage')}}"><img src="/static/images/back.png" alt="Return" id="image" height="50px"></a>
+</div>
+
+{% if current_user.is_authenticated %}
+
+<div class="h1_first">
+  <h1> Account Information </h1>
+</div>
+<div class="container">
+    <div>
+      <p>Username: {{current_user.username}}</p>
+    </div>
+    <div>
+      <p>Name: {{current_user.name}}</p>
+    </div>
+    <div>
+      <p>Surname: {{current_user.surname}}</p>
+    </div>
+    <div>
+      <p>Mobile phone: {{current_user.cellular}}</p>
+    </div>
+    <div>
+      <p>Email: {{current_user.email}}</p>
+    </div>
+</div>
+
+<div>
+  <div>
+    <a href="{{url_for('logout')}}" class="link_logout">
+      <button>LOGOUT</button>
+    </a>
+  </div>
+</div>
+
+{% elif session['username'] %}
+
+<div class="h1_first">
+  <h1> Account Information </h1>
+</div>
+<div class="container">
+  <div>
+    <div>
+      <p>Profile Image: <img src="{{session['photo']}}" width="30" height="30"></p>
+    </div>
+    <div>
+      <p>Username: {{session['username']}}</p>
+    </div>
+    <div>
+      <p>Name: {{session['name']}}</p>
+    </div>
+    <div>
+      <p>Surname: {{session['last_name']}}</p>
+    </div>
+    <div>
+      <p>Email: {{session['email']}}</p>
+    </div>
+  </div>
+  <div>
+    <div>
+      <a href="{{url_for('logout_google')}}" class="link_logout">
+        <button>LOGOUT</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+</body>
+</html>
