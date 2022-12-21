@@ -138,15 +138,6 @@ li.google a::before {
   background-image: url("/static/Images/google.png");
 }
 
-li.fb {
-  margin-left: 10px;
-}
-
-li.fb a::before {
-  margin: 0;
-  background-image: url("/static/Images/fb.png");
-}
-
 /* @media, It is a CSS query used for adopting all the screen resolution
    (such as a mobile, tablet, desktop, laptop, etc.) */
 
@@ -155,8 +146,7 @@ li.fb a::before {
     flex-direction: column;
   }
 
-  li.google,
-  li.fb {
+  li.google{
     margin: 0;
   }
 
