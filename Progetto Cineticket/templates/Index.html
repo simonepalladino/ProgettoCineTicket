@@ -1,10 +1,11 @@
 <!doctype html>
 <html>
 
-<head> <!-- CONTENIER DEI DATI, CI VANNO (LINK, TITLE, SCRIPT,META) -->
+<head>
   <link rel="icon" type="image/png" href="/static/Images/logo_piccolo.png"/>
   <title>Cineticket Cinema | Film | Eventi | Orari </title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#317EFB"/>
 
   <!-- Funzioni librerie carrello -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.min.css" integrity="sha512-ztsAq/T5Mif7onFaDEa5wsi2yyDn5ygdVwSSQ4iok5BPJQGYz1CoXWZSA7OgwGWrxrSrbF0K85PD5uLpimu4eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,6 +13,14 @@
   <!-- .... -->
   <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/static/stylesheet/Index.css">
+
+  <!--Manifest-->
+  <link rel="manifest" href="/static/js/manifest.json">
+  <meta name="theme-color" content="white"/>
+
+  <!--Apple touch icon-->
+  <link rel="apple-touch-icon" href="/static/Images/logo_piccolo.png">
+
 </head>
 
 <body id="body_home">
@@ -120,9 +129,9 @@
       <div class="current" id="current">1</div>
       <div class="page" id="next">Next Page</div>
     </div>
-
 <script src="/static/js/Search.js"></script>
 </div>
 
+<script src="/static/js/main.js"></script>
 </body>
 </html>
