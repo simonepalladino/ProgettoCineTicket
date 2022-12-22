@@ -4,7 +4,7 @@
   "theme_color": "white",
   "background_color": "#fafafa",
   "display": "standalone",
-  "scope": "http://localhost:8000/Progetto_Cineticket/templates/",
+  "scope": "http://localhost:8000/templates",
   "start_url": "Index.html",
   "icons": [
     {
@@ -26,7 +26,7 @@
       "purpose": "maskable any"
     },
     {
-      "src": "http://localhost:8000/static/assets/icons/icon-144x144.png",
+      "src": "/static/assets/icons/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "maskable any"
