@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/static/stylesheet/Account.css">
-    <title>Account Profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/45b1634a10.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/static/stylesheet/Account.css">
+  <title>Account Profile</title>
+
+  <!--Manifest-->
+  <link rel="manifest" href="/static/js/manifest.json">
+  <meta name="theme-color" content="white"/>
+
+  <!--Apple touch icon-->
+  <link rel="apple-touch-icon" href="/static/Images/logo_piccolo.png">
+
 </head>
 <body id="body_account">
 <div>
@@ -33,14 +41,13 @@
     <div>
       <p>Email: {{current_user.email}}</p>
     </div>
-</div>
 
-<div>
-  <div>
+  <div class="button_acc">
     <a href="{{url_for('logout')}}" class="link_logout">
       <button>LOGOUT</button>
     </a>
   </div>
+
 </div>
 
 {% elif session['username'] %}
@@ -50,32 +57,29 @@
 </div>
 <div class="container">
   <div>
-    <div>
-      <p>Profile Image: <img src="{{session['photo']}}" width="30" height="30"></p>
-    </div>
-    <div>
-      <p>Username: {{session['username']}}</p>
-    </div>
-    <div>
-      <p>Name: {{session['name']}}</p>
-    </div>
-    <div>
-      <p>Surname: {{session['last_name']}}</p>
-    </div>
-    <div>
-      <p>Email: {{session['email']}}</p>
-    </div>
+    <p>Profile Image: <img src="{{session['photo']}}" alt="logo" width="30" height="30"></p>
   </div>
   <div>
-    <div>
-      <a href="{{url_for('logout_google')}}" class="link_logout">
-        <button>LOGOUT</button>
-      </a>
-    </div>
+    <p>Username: {{session['username']}}</p>
+  </div>
+  <div>
+    <p>Name: {{session['name']}}</p>
+  </div>
+  <div>
+    <p>Surname: {{session['last_name']}}</p>
+  </div>
+  <div>
+    <p>Email: {{session['email']}}</p>
+  </div>
+  <div class="button_acc">
+    <a href="{{url_for('logout_google')}}" class="link_logout">
+      <button>LOGOUT</button>
+    </a>
   </div>
 </div>
 
 {% endif %}
 
+<script src="/static/js/main.js"></script>
 </body>
 </html>
