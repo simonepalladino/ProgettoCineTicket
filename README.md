@@ -1,67 +1,110 @@
-# CineTicket is a website that deals with cinema, allows users to register and log in. Users who have an account have the option to receive a promotion to redeem once they arrive at the cinema.
+# CineTicket - Cinema Website
 
-## COMPONENTS USED:
+**CineTicket** is a cinema-focused web application that allows users to register, log in, and receive special promotions to redeem at the cinema once they arrive. It's a simple, user-friendly platform built with popular web technologies.
 
-- Python3
-- Flask
-- SQL lite
-- HTML
-- Javascript
-- CSS
+---
 
+## :package: Components Used
 
-## INSTALLATION OF PROJECT COMPONENTS:
+- **Python 3**
+- **Flask**
+- **SQLite**
+- **HTML**
+- **JavaScript**
+- **CSS**
 
-select the project folder path via the ```cd``` command
+---
 
-Now write in the terminal:
-```
-pip3 install -r requirements.txt
-```
+## :computer: Installation of Project Components
 
-## GOOGLE CLOUD PLATFORM CONFIGURATION:
+To set up the project locally, follow these steps:
 
-1. create a google cloud platform account or login with your google account on console.cloud.google.com
-2. Go to dashboard and create a new project
-3. open the project
-4. Go to API & Services ---> Credentials
-5. Configure consent screen
-Settings consent screen:
--User Type: External
--Set the name and the other information
-6. Create credentials ---> Oauth client ID
-7. Set the name and the other information of the app and choose Web application as Application type
-8. Download client_secret.json file
+1. Navigate to the project folder using the `cd` command.
+2. Install the required dependencies by running the following command in the terminal:
+    ```
+    pip3 install -r requirements.txt
+    ```
 
+---
 
-## DATABASE CONFIGURATION WITH SQLITE AND SQL_ALCHEMY:
+## :cloud: Google Cloud Platform Configuration
 
-After writing the classes (even the user class) of the database on python we can proceed with the configuration of the database and the creation inside the folder path of our project.
+Follow these steps to configure Google Cloud for OAuth authentication:
 
-1. select the project folder path via the ```cd``` command
-2. write in the terminal ```python3``` to use python
-3. write in the terminal ```from app import db```
-4. write in the terminal ```db.create_all()```
-5. write in the terminal ```exit()```
+1. Create a Google Cloud Platform account or log in with your Google account at [Google Cloud Console](https://console.cloud.google.com).
+2. Create a new project on the dashboard and open it.
+3. Navigate to **API & Services** → **Credentials**.
+4. Configure the consent screen with the following settings:
+   - **User Type**: External
+   - Set the name and other necessary details.
+5. Create new credentials by selecting **OAuth Client ID**.
+6. Choose **Web application** as the application type, and set the name and other relevant details.
+7. Download the **client_secret.json** file.
 
+---
 
-## SQL LITE MENU VIA TERMINAL:
+## :floppy_disk: Database Configuration with SQLite and SQLAlchemy
 
-1. select the project folder path via the ```cd``` command
-2. write in the terminal ```sqlite3 database.db``` and press enter
-3. write in the terminal ```.tables``` to view all the tables of the database
-4. write in the terminal ```.exit()``` to leave
+Once you've written the necessary database classes (including the user class) in Python, you can set up the database with the following steps:
 
+1. Navigate to your project folder using the `cd` command.
+2. Open Python by typing:
+    ```
+    python3
+    ```
+3. In Python, import the database instance:
+    ```python
+    from app import db
+    ```
+4. Create the database and tables by running:
+    ```python
+    db.create_all()
+    ```
+5. Exit Python by typing:
+    ```python
+    exit()
+    ```
 
-## START SERVER:
+---
 
-1. select the project folder path via the ```cd``` command
-2. write in the terminal:
-ON MAC
-```python3 app.py```
-ON WINDOWS
-```python app.py```
+## :package: SQLite Menu via Terminal
 
-the server will start from port 8000 previously chosen via python
+To interact with your SQLite database, follow these steps:
 
-# Now everything is ready, you can have fun on our website!
+1. Navigate to the project folder using the `cd` command.
+2. Open the SQLite database by typing:
+    ```
+    sqlite3 database.db
+    ```
+3. To view all tables in the database, use the command:
+    ```sql
+    .tables
+    ```
+4. To exit the SQLite interface, type:
+    ```sql
+    .exit
+    ```
+
+---
+
+## :rocket: Start the Server
+
+To run the server and access the website, follow these instructions:
+
+1. Navigate to the project folder using the `cd` command.
+2. To start the server, run the following command:
+   - On **Mac**:
+     ```bash
+     python3 app.py
+     ```
+   - On **Windows**:
+     ```bash
+     python app.py
+     ```
+
+The server will start on port 8000, as configured in the app.
+
+---
+
+# 🎉 Everything is ready! You can now enjoy browsing **CineTicket** on your local machine.
+
